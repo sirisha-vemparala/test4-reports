@@ -1,59 +1,47 @@
 package com.qa.utils;
 
 import javax.mail.*;
-import javax.mail.internet.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 public class EmailUtils {
 
-    public static void sendEmailWithReportURL(String subject, String body) {
-        final String username = System.getenv("SMTP_USERNAME"); // Fetch SMTP username from environment variable
-        final String password = System.getenv("SMTP_PASSWORD"); // Fetch SMTP password from environment variable
+    // Method to send email with report URL and SMTP credentials
+    public static void sendEmailWithReportURL(String subject, String body, String smtpUsername, String smtpPassword, String[] recipients) {
+        String host = "smtp.gmail.com"; // Replace with your SMTP host
+        int port = 587; // Replace with your SMTP port
+        String from = smtpUsername;
 
-        // Path to email addresses properties file
-        String emailPropertiesFilePath = "src/main/resources/email_addresses.properties";
-
-        // Load email addresses from properties file
-        Properties emailProps = new Properties();
-        try {
-            emailProps.load(EmailUtils.class.getClassLoader().getResourceAsStream(emailPropertiesFilePath));
-        } catch (Exception e) {
-            e.printStackTrace();
-            return;
-        }
-
-        // Combine all email addresses into a single string separated by commas
-        String to = emailProps.values().stream()
-                .map(Object::toString)
-                .reduce((address1, address2) -> address1 + "," + address2)
-                .orElse("");
-
-        // SMTP properties
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.host", host);
+        props.put("mail.smtp.port", port);
 
-        // Create a mail session with SMTP authentication
-        Session session = Session.getInstance(props,
-                new javax.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(username, password);
-                    }
-                });
+        Session session = Session.getInstance(props, new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(smtpUsername, smtpPassword);
+            }
+        });
 
         try {
-            // Create a new email message
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(username)); // Set sender email address
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to)); // Set recipients
-            message.setSubject(subject); // Set email subject
-            message.setText(body); // Set email body
+            message.setFrom(new InternetAddress(from));
 
-            // Send the email
+            InternetAddress[] toAddresses = new InternetAddress[recipients.length];
+            for (int i = 0; i < recipients.length; i++) {
+                toAddresses[i] = new InternetAddress(recipients[i]);
+            }
+
+            message.setRecipients(Message.RecipientType.TO, toAddresses);
+            message.setSubject(subject);
+            message.setText(body);
+
             Transport.send(message);
-            System.out.println("Email sent successfully....");
+
+            System.out.println("Email sent successfully to " + String.join(", ", recipients));
         } catch (MessagingException e) {
             e.printStackTrace();
         }
