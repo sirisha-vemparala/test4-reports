@@ -1,5 +1,4 @@
 package com.qa.listeners;
-
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -10,7 +9,6 @@ import com.aventstack.extentreports.Status;
 import com.qa.utils.ExtentReporter;
 import com.qa.utils.EmailUtils;
 
-import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -51,47 +49,24 @@ public class MyListeners implements ITestListener {
     public void onFinish(ITestContext context) {
         extentReport.flush();
 
-        // Generate Excel file with timestamp
-        String timeStamp = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
-        String excelFileName = "ExtentReports_" + timeStamp + ".xlsx";
-        String excelFilePath = "C:/Users/Hello/eclipse-workspace/test/test-output/" + excelFileName;
+        // Get the current timestamp
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
-        // Assuming the report is hosted at this URL
-        String reportURL = "file:///C:/Users/Hello/eclipse-workspace/test/test-output/ExtentReports/extentReport.html"; // Adjust as needed
-        
-        // Create Excel file
-        createExcelFile(excelFilePath, reportURL);
+        // GitHub Pages URL where reports are hosted
+        String githubPagesURL = "https://sirisha-vemparala.github.io/automation-reports";
 
-        // Send email with the Excel attachment
-        sendEmailWithExcelAttachment(excelFilePath);
+        // URL of the report
+        String reportURL = githubPagesURL + "/extentReport_" + timeStamp + ".html";
+
+        // Send email with the report URL
+        sendEmailWithReportURL(reportURL);
     }
 
-    private void createExcelFile(String filePath, String reportURL) {
-        // You can use Apache POI or any other library to create Excel files
-        // Here's a simple example using Apache POI to create an Excel file
-        // Adjust this code based on your requirements
-        
-        // TODO: Implement logic to create Excel file
-        // For now, let's just create an empty file
-        try {
-            File file = new File(filePath);
-            boolean created = file.createNewFile();
-            if (created) {
-                System.out.println("Excel file created: " + filePath);
-            } else {
-                System.out.println("Failed to create Excel file!");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void sendEmailWithExcelAttachment(String filePath) {
+    private void sendEmailWithReportURL(String reportURL) {
         String subject = "Automation Test Report";
-        String body = "Hello,\n\nPlease find the automation test report attached.";
+        String body = "Hello,\n\nPlease find the automation test report at:\n" + reportURL + "\n\nRegards,\nYour Automation Team";
 
-        // Call EmailUtils to send email with attachment
-        EmailUtils.sendEmailWithAttachment(subject, body, filePath);
+        // Call EmailUtils to send email with the report URL
+        EmailUtils.sendEmailWithReportURL(subject, body);
     }
 }
-

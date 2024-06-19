@@ -2,71 +2,60 @@ package com.qa.utils;
 
 import javax.mail.*;
 import javax.mail.internet.*;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
-import java.util.stream.Collectors;
 
 public class EmailUtils {
-    public static void sendEmailWithAttachment(String subject, String body, String attachmentPath) {
-        final String username = "sirishavemparala1203@gmail.com"; 
-        final String password = "dxxf rnia azci edpa"; 
 
+    public static void sendEmailWithReportURL(String subject, String body) {
+        final String username = System.getenv("SMTP_USERNAME"); // Fetch SMTP username from environment variable
+        final String password = System.getenv("SMTP_PASSWORD"); // Fetch SMTP password from environment variable
+
+        // Path to email addresses properties file
+        String emailPropertiesFilePath = "src/main/resources/email_addresses.properties";
+
+        // Load email addresses from properties file
         Properties emailProps = new Properties();
-        try (InputStream input = EmailUtils.class.getClassLoader().getResourceAsStream("email_addresses.properties")) {
-            if (input == null) {
-                System.out.println("Sorry, unable to find email_addresses.properties");
-                return;
-            }
-            emailProps.load(input);
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        try {
+            emailProps.load(EmailUtils.class.getClassLoader().getResourceAsStream(emailPropertiesFilePath));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
         }
 
+        // Combine all email addresses into a single string separated by commas
         String to = emailProps.values().stream()
-            .map(Object::toString)
-            .collect(Collectors.joining(","));
+                .map(Object::toString)
+                .reduce((address1, address2) -> address1 + "," + address2)
+                .orElse("");
 
+        // SMTP properties
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
 
+        // Create a mail session with SMTP authentication
         Session session = Session.getInstance(props,
-            new javax.mail.Authenticator() {
-                protected PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication(username, password);
-                }
-            });
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(username, password);
+                    }
+                });
 
         try {
+            // Create a new email message
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(username));
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
-            message.setSubject(subject);
+            message.setFrom(new InternetAddress(username)); // Set sender email address
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to)); // Set recipients
+            message.setSubject(subject); // Set email subject
+            message.setText(body); // Set email body
 
-            // Create the message body part
-            MimeBodyPart messageBodyPart = new MimeBodyPart();
-            messageBodyPart.setText(body);
-
-            // Create the attachment body part
-            MimeBodyPart attachmentBodyPart = new MimeBodyPart();
-            attachmentBodyPart.attachFile(attachmentPath);
-
-            // Create Multipart object to hold both the message and attachment
-            Multipart multipart = new MimeMultipart();
-            multipart.addBodyPart(messageBodyPart);
-            multipart.addBodyPart(attachmentBodyPart);
-
-            // Set the content for the message
-            message.setContent(multipart);
-
-            // Send the message
+            // Send the email
             Transport.send(message);
-            System.out.println("Sent message successfully....");
-        } catch (MessagingException | IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Email sent successfully....");
+        } catch (MessagingException e) {
+            e.printStackTrace();
         }
     }
 }
