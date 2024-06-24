@@ -14,7 +14,7 @@ public class ExtentReporter {
 
     public static ExtentReports generateExtentReport() {
         if (extentReport == null) {
-            reportFileName = "index_" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".html";
+            reportFileName = "extentReports_" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".html";
             String reportPath = System.getProperty("user.dir") + "/reports/" + reportFileName;
             ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
 
