@@ -9,6 +9,11 @@
       <class name="corporate.InsideFeatures">
         <methods>
           <include name="profile"/>
+          <include name="loadmoney"/>
+          <include name="sendmoney"/>
+          <include name="withdraw"/>
+          <include name="Adduser"/>
+          <include name="login"/>
           <include name="setup"/>
           <include name="transaction"/>
         </methods>
