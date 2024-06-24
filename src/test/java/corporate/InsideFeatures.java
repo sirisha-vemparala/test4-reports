@@ -16,9 +16,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class InsideFeatures {
+import com.qa.listeners.BaseTest;
+
+public class InsideFeatures extends BaseTest{
 	ChromeDriver driver1;
-	WebDriver driver = new ChromeDriver();
+	//WebDriver driver = new ChromeDriver();
 	@Test(priority=1)
 	public void login() throws InterruptedException {
 		driver.navigate().to("https://qa.mypursu.com/");

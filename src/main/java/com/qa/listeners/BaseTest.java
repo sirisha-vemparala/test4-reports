@@ -23,7 +23,7 @@ public class BaseTest {
 	public void failed(String methodname) throws Exception
 	{
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		File dest=new File("C:\\Users\\Hello\\eclipse-workspace\\test4\\screen"+methodname+".png");
+		File dest=new File(".\\screen\\"+methodname+".png");
 		try
 		{
 		FileUtils.copyFile(src,dest);
