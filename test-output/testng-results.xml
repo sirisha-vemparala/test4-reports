@@ -1,267 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="4" failed="4" skipped="0">
+<testng-results ignored="0" total="8" passed="6" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-24T14:02:45 IST" name="Suite" finished-at="2024-06-24T14:05:45 IST" duration-ms="179626">
+  <suite started-at="2024-06-24T14:31:13 IST" name="Suite" finished-at="2024-06-24T14:34:04 IST" duration-ms="170635">
     <groups>
     </groups>
-    <test started-at="2024-06-24T14:02:45 IST" name="Test" finished-at="2024-06-24T14:05:45 IST" duration-ms="179626">
+    <test started-at="2024-06-24T14:31:13 IST" name="Test" finished-at="2024-06-24T14:34:04 IST" duration-ms="170635">
       <class name="corporate.InsideFeatures">
-        <test-method signature="login()[pri:1, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:02:46 IST" name="login" finished-at="2024-06-24T14:03:45 IST" duration-ms="58918" status="PASS">
+        <test-method signature="login()[pri:1, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:31:13 IST" name="login" finished-at="2024-06-24T14:32:05 IST" duration-ms="51874" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="Adduser()[pri:2, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:03:45 IST" name="Adduser" finished-at="2024-06-24T14:04:19 IST" duration-ms="34456" status="PASS">
+        <test-method signature="Adduser()[pri:2, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:32:05 IST" name="Adduser" finished-at="2024-06-24T14:32:39 IST" duration-ms="34135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Adduser -->
-        <test-method signature="loadmoney()[pri:3, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:04:19 IST" name="loadmoney" finished-at="2024-06-24T14:04:26 IST" duration-ms="6317" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=126.0.6478.114)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [db9d58ebfc79c558d3036d7d16d590ac, sendKeysToElement {id=f.2DB0E9484FCF0D98FFE3559DD62C5063.d.249EFF32E93D210C76A1F6C85C2C49DF.e.168, value=[Ljava.lang.CharSequence;@40712ee9}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59089/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (db9d58ebfc79c558d3036d7d16d590ac)] -> xpath: (//input[@placeholder='Enter Amount'])[2]]
-Session ID: db9d58ebfc79c558d3036d7d16d590ac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=126.0.6478.114)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [db9d58ebfc79c558d3036d7d16d590ac, sendKeysToElement {id=f.2DB0E9484FCF0D98FFE3559DD62C5063.d.249EFF32E93D210C76A1F6C85C2C49DF.e.168, value=[Ljava.lang.CharSequence;@40712ee9}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59089/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (db9d58ebfc79c558d3036d7d16d590ac)] -> xpath: (//input[@placeholder='Enter Amount'])[2]]
-Session ID: db9d58ebfc79c558d3036d7d16d590ac
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
-at corporate.InsideFeatures.loadmoney(InsideFeatures.java:101)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="loadmoney()[pri:3, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:32:39 IST" name="loadmoney" finished-at="2024-06-24T14:33:00 IST" duration-ms="20783" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadmoney -->
-        <test-method signature="withdraw()[pri:4, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:04:26 IST" name="withdraw" finished-at="2024-06-24T14:04:39 IST" duration-ms="12952" status="PASS">
+        <test-method signature="withdraw()[pri:4, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:33:00 IST" name="withdraw" finished-at="2024-06-24T14:33:13 IST" duration-ms="12369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- withdraw -->
-        <test-method signature="sendmoney()[pri:5, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:04:39 IST" name="sendmoney" finished-at="2024-06-24T14:04:42 IST" duration-ms="3513" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@title='Send Money'])[2]"}
-  (Session info: chrome=126.0.6478.114)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [db9d58ebfc79c558d3036d7d16d590ac, findElement {using=xpath, value=(//a[@title='Send Money'])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59089/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: db9d58ebfc79c558d3036d7d16d590ac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@title='Send Money'])[2]"}
-  (Session info: chrome=126.0.6478.114)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [db9d58ebfc79c558d3036d7d16d590ac, findElement {using=xpath, value=(//a[@title='Send Money'])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59089/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: db9d58ebfc79c558d3036d7d16d590ac
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-at corporate.InsideFeatures.sendmoney(InsideFeatures.java:151)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="sendmoney()[pri:5, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:33:13 IST" name="sendmoney" finished-at="2024-06-24T14:33:22 IST" duration-ms="9275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendmoney -->
-        <test-method signature="transaction()[pri:6, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:04:42 IST" name="transaction" finished-at="2024-06-24T14:05:05 IST" duration-ms="22725" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="transaction()[pri:6, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:33:22 IST" name="transaction" finished-at="2024-06-24T14:33:26 IST" duration-ms="4108" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@href='#transactionDetail'])[1]"}
+              <![CDATA[element click intercepted: Element <button class="btn btn-outline-secondary">...</button> is not clickable at point (1044, 214). Other element would receive the click: <div class="modal fade show" id="employeeTotalAmountLoaded" tabindex="-1" aria-labelledby="employeeTotalAmountLoadedLabel" aria-modal="true" role="dialog" style="display: block;">...</div>
   (Session info: chrome=126.0.6478.114)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [db9d58ebfc79c558d3036d7d16d590ac, findElement {using=xpath, value=(//a[@href='#transactionDetail'])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59089/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: db9d58ebfc79c558d3036d7d16d590ac]]>
+Command: [c59c7474380e4a3901d424d4d55eb551, clickElement {id=f.70E2E2D1B562AE365D7CB0611724EB4B.d.3FF6A22573A3D5F705E3D12CB415A131.e.301}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61945/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c59c7474380e4a3901d424d4d55eb551)] -> xpath: //button[contains(text(),'Transaction')]]
+Session ID: c59c7474380e4a3901d424d4d55eb551]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@href='#transactionDetail'])[1]"}
-  (Session info: chrome=126.0.6478.114)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [db9d58ebfc79c558d3036d7d16d590ac, findElement {using=xpath, value=(//a[@href='#transactionDetail'])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59089/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: db9d58ebfc79c558d3036d7d16d590ac
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-at corporate.InsideFeatures.transaction(InsideFeatures.java:127)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- transaction -->
-        <test-method signature="profile()[pri:7, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:05:05 IST" name="profile" finished-at="2024-06-24T14:05:10 IST" duration-ms="5504" status="FAIL">
-          <exception class="org.openqa.selenium.InvalidElementStateException">
-            <message>
-              <![CDATA[invalid element state
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="btn btn-outline-secondary">...</button> is not clickable at point (1044, 214). Other element would receive the click: <div class="modal fade show" id="employeeTotalAmountLoaded" tabindex="-1" aria-labelledby="employeeTotalAmountLoadedLabel" aria-modal="true" role="dialog" style="display: block;">...</div>
   (Session info: chrome=126.0.6478.114)
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [db9d58ebfc79c558d3036d7d16d590ac, clearElement {id=f.2DB0E9484FCF0D98FFE3559DD62C5063.d.CA7D73D60D18983AC764912D73054AA8.e.283}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59089/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (db9d58ebfc79c558d3036d7d16d590ac)] -> id: name]
-Session ID: db9d58ebfc79c558d3036d7d16d590ac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidElementStateException: invalid element state
-  (Session info: chrome=126.0.6478.114)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [db9d58ebfc79c558d3036d7d16d590ac, clearElement {id=f.2DB0E9484FCF0D98FFE3559DD62C5063.d.CA7D73D60D18983AC764912D73054AA8.e.283}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59089/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (db9d58ebfc79c558d3036d7d16d590ac)] -> id: name]
-Session ID: db9d58ebfc79c558d3036d7d16d590ac
+Command: [c59c7474380e4a3901d424d4d55eb551, clickElement {id=f.70E2E2D1B562AE365D7CB0611724EB4B.d.3FF6A22573A3D5F705E3D12CB415A131.e.301}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61945/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c59c7474380e4a3901d424d4d55eb551)] -> xpath: //button[contains(text(),'Transaction')]]
+Session ID: c59c7474380e4a3901d424d4d55eb551
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -275,8 +63,8 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(Driver
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:130)
-at corporate.InsideFeatures.profile(InsideFeatures.java:168)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at corporate.InsideFeatures.transaction(InsideFeatures.java:116)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -307,11 +95,83 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidElementStateException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- transaction -->
+        <test-method signature="profile()[pri:7, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:33:26 IST" name="profile" finished-at="2024-06-24T14:33:30 IST" duration-ms="4164" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <a class="nav-link " href="https://qa.mypursu.com/profile">...</a> is not clickable at point (764, 34). Other element would receive the click: <div class="modal-header justify-content-center">...</div>
+  (Session info: chrome=126.0.6478.114)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c59c7474380e4a3901d424d4d55eb551, clickElement {id=f.70E2E2D1B562AE365D7CB0611724EB4B.d.3FF6A22573A3D5F705E3D12CB415A131.e.302}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61945/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c59c7474380e4a3901d424d4d55eb551)] -> xpath: //a[contains(text(),'Profile')]]
+Session ID: c59c7474380e4a3901d424d4d55eb551]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="nav-link " href="https://qa.mypursu.com/profile">...</a> is not clickable at point (764, 34). Other element would receive the click: <div class="modal-header justify-content-center">...</div>
+  (Session info: chrome=126.0.6478.114)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c59c7474380e4a3901d424d4d55eb551, clickElement {id=f.70E2E2D1B562AE365D7CB0611724EB4B.d.3FF6A22573A3D5F705E3D12CB415A131.e.302}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61945/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c59c7474380e4a3901d424d4d55eb551)] -> xpath: //a[contains(text(),'Profile')]]
+Session ID: c59c7474380e4a3901d424d4d55eb551
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at corporate.InsideFeatures.profile(InsideFeatures.java:165)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- profile -->
-        <test-method signature="mainpage()[pri:8, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:05:11 IST" name="mainpage" finished-at="2024-06-24T14:05:45 IST" duration-ms="34473" status="PASS">
+        <test-method signature="mainpage()[pri:8, instance:corporate.InsideFeatures@67af833b]" started-at="2024-06-24T14:33:30 IST" name="mainpage" finished-at="2024-06-24T14:34:04 IST" duration-ms="33629" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mainpage -->

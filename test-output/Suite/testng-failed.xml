@@ -9,8 +9,6 @@
       <class name="corporate.InsideFeatures">
         <methods>
           <include name="profile"/>
-          <include name="loadmoney"/>
-          <include name="sendmoney"/>
           <include name="transaction"/>
         </methods>
       </class> <!-- corporate.InsideFeatures -->

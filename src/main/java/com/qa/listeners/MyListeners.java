@@ -40,12 +40,14 @@ public class MyListeners extends BaseTest implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        String testName = result.getName();
-        try {
-            failed(result.getMethod().getMethodName());
-        } catch (Exception e) {
-            extentTest.log(Status.WARNING, "Failed to capture screenshot: " + e.getMessage());
-        }
+    	ITestListener.super.onTestFailure(result);
+   		String testName = result.getName();
+   		try {
+			failed(result.getMethod().getMethodName());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         extentTest.log(Status.FAIL, testName + " got failed");
     }
 
