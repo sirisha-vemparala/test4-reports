@@ -13,12 +13,11 @@ import com.qa.utils.ExtentReporter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MyListeners implements ITestListener {
+public class MyListeners extends BaseTest implements ITestListener {
     private ExtentReports extentReport;
     private ExtentTest extentTest;
-    private String reportTitle = "Automation Test Report"; // Default report title
-    
-    // Fetch SMTP_USERNAME and SMTP_PASSWORD from environment variables
+    private String reportTitle = "Automation Test Report";
+
     private final String smtpUsername = System.getenv("SMTP_USERNAME");
     private final String smtpPassword = System.getenv("SMTP_PASSWORD");
 
@@ -41,7 +40,13 @@ public class MyListeners implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
+        ITestListener.super.onTestFailure(result);
         String testName = result.getName();
+        try {
+            failed(result.getMethod().getMethodName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         extentTest.log(Status.FAIL, testName + " got failed");
     }
 
@@ -55,17 +60,14 @@ public class MyListeners implements ITestListener {
     public void onFinish(ITestContext context) {
         extentReport.flush();
 
-        // Get the current timestamp
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
-        // GitHub Pages URL where reports are hosted
         String githubPagesURL = "https://sirisha-vemparala.github.io/test4-reports/test-output/ExtentReports";
 
         // URL of the report
         String reportURL = githubPagesURL + "/extentReport.html";
 
-        // Send email with the report URL to multiple recipients
-        String[] recipients = {"sirishavemparala12@gmail.com", "prathyushavemparala335@gmail.com"}; // Replace with actual recipient emails
+        String[] recipients = {"sirishavemparala12@gmail.com", "mounika11195@gmail.com"}; // Replace with actual recipient emails
         sendEmailWithReportURL(reportURL, timeStamp, recipients);
     }
 
@@ -73,9 +75,7 @@ public class MyListeners implements ITestListener {
         String subject = "Automation Test Report";
         String body = "Hello,\n\nPlease find the " + reportTitle + " generated at " + timeStamp + " at:\n" + reportURL + "\n\nRegards,\nYour Automation Team";
 
-        // Check if SMTP credentials are available
         if (smtpUsername != null && smtpPassword != null) {
-            // Call EmailUtils to send email with the report URL and SMTP credentials
             EmailUtils.sendEmailWithReportURL(subject, body, smtpUsername, smtpPassword, recipients);
         } else {
             System.out.println("SMTP credentials (SMTP_USERNAME and SMTP_PASSWORD) are not set in environment variables.");

@@ -7,10 +7,10 @@ import java.util.Properties;
 
 public class EmailUtils {
 
-    // Method to send email with report URL and SMTP credentials
+    
     public static void sendEmailWithReportURL(String subject, String body, String smtpUsername, String smtpPassword, String[] recipients) {
-        String host = "smtp.gmail.com"; // Replace with your SMTP host
-        int port = 587; // Replace with your SMTP port
+        String host = "smtp.gmail.com"; 
+        int port = 587; 
         String from = smtpUsername;
 
         Properties props = new Properties();

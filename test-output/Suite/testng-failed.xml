@@ -13,7 +13,6 @@
           <include name="sendmoney"/>
           <include name="withdraw"/>
           <include name="Adduser"/>
-          <include name="login"/>
           <include name="transaction"/>
         </methods>
       </class> <!-- corporate.InsideFeatures -->
