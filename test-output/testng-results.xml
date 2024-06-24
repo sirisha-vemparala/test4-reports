@@ -2,36 +2,36 @@
 <testng-results ignored="0" total="8" passed="6" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-24T17:17:30 IST" name="Suite" finished-at="2024-06-24T17:20:29 IST" duration-ms="178884">
+  <suite started-at="2024-06-24T17:22:09 IST" name="Suite" finished-at="2024-06-24T17:24:46 IST" duration-ms="156243">
     <groups>
     </groups>
-    <test started-at="2024-06-24T17:17:30 IST" name="Test" finished-at="2024-06-24T17:20:29 IST" duration-ms="178884">
+    <test started-at="2024-06-24T17:22:09 IST" name="Test" finished-at="2024-06-24T17:24:46 IST" duration-ms="156243">
       <class name="corporate.InsideFeatures">
-        <test-method is-config="true" signature="setup()[pri:0, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:17:31 IST" name="setup" finished-at="2024-06-24T17:17:34 IST" duration-ms="2768" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:22:10 IST" name="setup" finished-at="2024-06-24T17:22:12 IST" duration-ms="2302" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:1, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:17:34 IST" name="login" finished-at="2024-06-24T17:18:29 IST" duration-ms="54894" status="PASS">
+        <test-method signature="login()[pri:1, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:22:12 IST" name="login" finished-at="2024-06-24T17:22:52 IST" duration-ms="40081" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="Adduser()[pri:2, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:18:29 IST" name="Adduser" finished-at="2024-06-24T17:19:02 IST" duration-ms="33163" status="PASS">
+        <test-method signature="Adduser()[pri:2, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:22:52 IST" name="Adduser" finished-at="2024-06-24T17:23:26 IST" duration-ms="33887" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Adduser -->
-        <test-method signature="loadmoney()[pri:3, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:19:02 IST" name="loadmoney" finished-at="2024-06-24T17:19:23 IST" duration-ms="21162" status="PASS">
+        <test-method signature="loadmoney()[pri:3, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:23:26 IST" name="loadmoney" finished-at="2024-06-24T17:23:46 IST" duration-ms="19745" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadmoney -->
-        <test-method signature="withdraw()[pri:4, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:19:23 IST" name="withdraw" finished-at="2024-06-24T17:19:35 IST" duration-ms="11578" status="PASS">
+        <test-method signature="withdraw()[pri:4, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:23:46 IST" name="withdraw" finished-at="2024-06-24T17:23:58 IST" duration-ms="12097" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- withdraw -->
-        <test-method signature="sendmoney()[pri:5, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:19:35 IST" name="sendmoney" finished-at="2024-06-24T17:19:44 IST" duration-ms="9189" status="PASS">
+        <test-method signature="sendmoney()[pri:5, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:23:58 IST" name="sendmoney" finished-at="2024-06-24T17:24:07 IST" duration-ms="9213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendmoney -->
-        <test-method signature="transaction()[pri:6, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:19:44 IST" name="transaction" finished-at="2024-06-24T17:19:48 IST" duration-ms="4129" status="FAIL">
+        <test-method signature="transaction()[pri:6, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:24:07 IST" name="transaction" finished-at="2024-06-24T17:24:11 IST" duration-ms="4085" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
               <![CDATA[element click intercepted: Element <button class="btn btn-outline-secondary">...</button> is not clickable at point (1044, 214). Other element would receive the click: <div class="modal fade show" id="employeeTotalAmountLoaded" tabindex="-1" aria-labelledby="employeeTotalAmountLoadedLabel" aria-modal="true" role="dialog" style="display: block;">...</div>
@@ -39,10 +39,10 @@
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ac1ad8ba8ed79fef41eb4d559613968c, clickElement {id=f.7455C0934824CBFBADC3B7B4737BD4B7.d.F94495C86C978084659EA2282290F5D2.e.285}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54515}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54515/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ac1ad8ba8ed79fef41eb4d559613968c)] -> xpath: //button[contains(text(),'Transaction')]]
-Session ID: ac1ad8ba8ed79fef41eb4d559613968c]]>
+Command: [c19bc0cdde05d833b4bfa25185984d8c, clickElement {id=f.BBB517F89298B3DDD0696DC70DCD3BA8.d.8356EF04F1245B9B34E0573370BAC277.e.283}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55095}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55095/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c19bc0cdde05d833b4bfa25185984d8c)] -> xpath: //button[contains(text(),'Transaction')]]
+Session ID: c19bc0cdde05d833b4bfa25185984d8c]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="btn btn-outline-secondary">...</button> is not clickable at point (1044, 214). Other element would receive the click: <div class="modal fade show" id="employeeTotalAmountLoaded" tabindex="-1" aria-labelledby="employeeTotalAmountLoadedLabel" aria-modal="true" role="dialog" style="display: block;">...</div>
@@ -50,10 +50,10 @@ Session ID: ac1ad8ba8ed79fef41eb4d559613968c]]>
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ac1ad8ba8ed79fef41eb4d559613968c, clickElement {id=f.7455C0934824CBFBADC3B7B4737BD4B7.d.F94495C86C978084659EA2282290F5D2.e.285}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54515}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54515/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ac1ad8ba8ed79fef41eb4d559613968c)] -> xpath: //button[contains(text(),'Transaction')]]
-Session ID: ac1ad8ba8ed79fef41eb4d559613968c
+Command: [c19bc0cdde05d833b4bfa25185984d8c, clickElement {id=f.BBB517F89298B3DDD0696DC70DCD3BA8.d.8356EF04F1245B9B34E0573370BAC277.e.283}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55095}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55095/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c19bc0cdde05d833b4bfa25185984d8c)] -> xpath: //button[contains(text(),'Transaction')]]
+Session ID: c19bc0cdde05d833b4bfa25185984d8c
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -103,7 +103,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- transaction -->
-        <test-method signature="profile()[pri:7, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:19:48 IST" name="profile" finished-at="2024-06-24T17:19:52 IST" duration-ms="4078" status="FAIL">
+        <test-method signature="profile()[pri:7, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:24:11 IST" name="profile" finished-at="2024-06-24T17:24:16 IST" duration-ms="4116" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
               <![CDATA[element click intercepted: Element <a class="nav-link " href="https://qa.mypursu.com/profile">...</a> is not clickable at point (764, 34). Other element would receive the click: <div class="modal-header justify-content-center">...</div>
@@ -111,10 +111,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ac1ad8ba8ed79fef41eb4d559613968c, clickElement {id=f.7455C0934824CBFBADC3B7B4737BD4B7.d.F94495C86C978084659EA2282290F5D2.e.286}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54515}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54515/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ac1ad8ba8ed79fef41eb4d559613968c)] -> xpath: //a[contains(text(),'Profile')]]
-Session ID: ac1ad8ba8ed79fef41eb4d559613968c]]>
+Command: [c19bc0cdde05d833b4bfa25185984d8c, clickElement {id=f.BBB517F89298B3DDD0696DC70DCD3BA8.d.8356EF04F1245B9B34E0573370BAC277.e.284}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55095}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55095/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c19bc0cdde05d833b4bfa25185984d8c)] -> xpath: //a[contains(text(),'Profile')]]
+Session ID: c19bc0cdde05d833b4bfa25185984d8c]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="nav-link " href="https://qa.mypursu.com/profile">...</a> is not clickable at point (764, 34). Other element would receive the click: <div class="modal-header justify-content-center">...</div>
@@ -122,10 +122,10 @@ Session ID: ac1ad8ba8ed79fef41eb4d559613968c]]>
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ac1ad8ba8ed79fef41eb4d559613968c, clickElement {id=f.7455C0934824CBFBADC3B7B4737BD4B7.d.F94495C86C978084659EA2282290F5D2.e.286}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54515}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54515/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ac1ad8ba8ed79fef41eb4d559613968c)] -> xpath: //a[contains(text(),'Profile')]]
-Session ID: ac1ad8ba8ed79fef41eb4d559613968c
+Command: [c19bc0cdde05d833b4bfa25185984d8c, clickElement {id=f.BBB517F89298B3DDD0696DC70DCD3BA8.d.8356EF04F1245B9B34E0573370BAC277.e.284}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55095}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55095/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c19bc0cdde05d833b4bfa25185984d8c)] -> xpath: //a[contains(text(),'Profile')]]
+Session ID: c19bc0cdde05d833b4bfa25185984d8c
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -175,7 +175,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- profile -->
-        <test-method signature="mainpage()[pri:8, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:19:52 IST" name="mainpage" finished-at="2024-06-24T17:20:29 IST" duration-ms="37103" status="PASS">
+        <test-method signature="mainpage()[pri:8, instance:corporate.InsideFeatures@2a7f1f10]" started-at="2024-06-24T17:24:16 IST" name="mainpage" finished-at="2024-06-24T17:24:46 IST" duration-ms="29988" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mainpage -->
