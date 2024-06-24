@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 2 failed,   6 passed</span>
+                    <span class="method-stats">8 methods, 3 failed,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,6 +102,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
                     <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="corporate.InsideFeatures" class="method navigator-link" hash-for-method="loadmoney">loadmoney</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="corporate.InsideFeatures" class="method navigator-link" hash-for-method="profile">profile</a> <!-- method navigator-link -->
@@ -124,11 +129,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="corporate.InsideFeatures" class="method navigator-link" hash-for-method="Adduser">Adduser</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="corporate.InsideFeatures" class="method navigator-link" hash-for-method="loadmoney">loadmoney</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -171,6 +171,35 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="loadmoney">
+                  </a> <!-- loadmoney -->
+                  <span class="method-name">loadmoney</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=126.0.6478.114)
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a6a2e4fe8b94a91ad8b921d7eccb53f6, sendKeysToElement {id=f.191AF8E30353D9CF6E2EC13996ED0E7E.d.BB5BEA4B549AA37CB1EB1614A93708C9.e.154, value=[Ljava.lang.CharSequence;@3eabe84a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53220}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53220/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a6a2e4fe8b94a91ad8b921d7eccb53f6)] -&gt; xpath: (//input[@placeholder=&apos;Enter Amount&apos;])[2]]
+Session ID: a6a2e4fe8b94a91ad8b921d7eccb53f6
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at corporate.InsideFeatures.loadmoney(InsideFeatures.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="profile">
                   </a> <!-- profile -->
                   <span class="method-name">profile</span>
@@ -179,10 +208,10 @@
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d1c9143722571675173561330bb9477e, clickElement {id=f.2805E1996FC214623E5D602DFD6B168E.d.BCA3FB7686FC9A1BD1FA9463CA8192F9.e.292}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51743}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51743/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (d1c9143722571675173561330bb9477e)] -&gt; xpath: //a[contains(text(),&apos;Profile&apos;)]]
-Session ID: d1c9143722571675173561330bb9477e
+Command: [a6a2e4fe8b94a91ad8b921d7eccb53f6, clickElement {id=f.191AF8E30353D9CF6E2EC13996ED0E7E.d.0DC9698FBEA2971C12A00AF4161F8731.e.240}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53220}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53220/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a6a2e4fe8b94a91ad8b921d7eccb53f6)] -&gt; xpath: //a[contains(text(),&apos;Profile&apos;)]]
+Session ID: a6a2e4fe8b94a91ad8b921d7eccb53f6
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -208,10 +237,10 @@ Session ID: d1c9143722571675173561330bb9477e
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d1c9143722571675173561330bb9477e, clickElement {id=f.2805E1996FC214623E5D602DFD6B168E.d.BCA3FB7686FC9A1BD1FA9463CA8192F9.e.291}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51743}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51743/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (d1c9143722571675173561330bb9477e)] -&gt; xpath: //button[contains(text(),&apos;Transaction&apos;)]]
-Session ID: d1c9143722571675173561330bb9477e
+Command: [a6a2e4fe8b94a91ad8b921d7eccb53f6, clickElement {id=f.191AF8E30353D9CF6E2EC13996ED0E7E.d.0DC9698FBEA2971C12A00AF4161F8731.e.239}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.63 (df799988fdc9..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53220}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53220/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a6a2e4fe8b94a91ad8b921d7eccb53f6)] -&gt; xpath: //button[contains(text(),&apos;Transaction&apos;)]]
+Session ID: a6a2e4fe8b94a91ad8b921d7eccb53f6
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -240,13 +269,6 @@ Session ID: d1c9143722571675173561330bb9477e
                   <a name="Adduser">
                   </a> <!-- Adduser -->
                   <span class="method-name">Adduser</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loadmoney">
-                  </a> <!-- loadmoney -->
-                  <span class="method-name">loadmoney</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -338,40 +360,40 @@ data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'login')
 data.setCell(0, 2, 'corporate.InsideFeatures')
-data.setCell(0, 3, 93354);
+data.setCell(0, 3, 51933);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'mainpage')
 data.setCell(1, 2, 'corporate.InsideFeatures')
-data.setCell(1, 3, 52799);
+data.setCell(1, 3, 35159);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'Adduser')
 data.setCell(2, 2, 'corporate.InsideFeatures')
-data.setCell(2, 3, 35978);
+data.setCell(2, 3, 33607);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'loadmoney')
 data.setCell(3, 2, 'corporate.InsideFeatures')
-data.setCell(3, 3, 19973);
+data.setCell(3, 3, 16265);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'withdraw')
+data.setCell(4, 1, 'sendmoney')
 data.setCell(4, 2, 'corporate.InsideFeatures')
-data.setCell(4, 3, 11951);
+data.setCell(4, 3, 14095);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'sendmoney')
+data.setCell(5, 1, 'withdraw')
 data.setCell(5, 2, 'corporate.InsideFeatures')
-data.setCell(5, 3, 9300);
+data.setCell(5, 3, 12000);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'transaction')
 data.setCell(6, 2, 'corporate.InsideFeatures')
-data.setCell(6, 3, 4174);
+data.setCell(6, 3, 4195);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'profile')
 data.setCell(7, 2, 'corporate.InsideFeatures')
-data.setCell(7, 3, 4152);
+data.setCell(7, 3, 4189);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -404,39 +426,41 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">3092 ms</span>
+                <span class="method-start">4725 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Adduser</span>
-                <span class="method-start">96471 ms</span>
+                <span class="method-start">56676 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">loadmoney</span>
-                <span class="method-start">132459 ms</span>
+                <span class="method-start">90290 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">withdraw</span>
-                <span class="method-start">152439 ms</span>
+                <span class="method-start">106759 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sendmoney</span>
-                <span class="method-start">164396 ms</span>
+                <span class="method-start">118761 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">transaction</span>
-                <span class="method-start">173699 ms</span>
+                <span class="method-start">132858 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">profile</span>
-                <span class="method-start">178100 ms</span>
+                <span class="method-start">137228 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">mainpage</span>
-                <span class="method-start">182450 ms</span>
+                <span class="method-start">141593 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
