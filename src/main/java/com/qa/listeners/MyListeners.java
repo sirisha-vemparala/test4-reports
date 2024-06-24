@@ -16,7 +16,7 @@ import java.util.Date;
 public class MyListeners extends BaseTest implements ITestListener {
     private ExtentReports extentReport;
     private ExtentTest extentTest;
-    private String reportTitle = "Automation Test Report";
+    private final String reportTitle = "Automation Test Report";
 
     private final String smtpUsername = System.getenv("SMTP_USERNAME");
     private final String smtpPassword = System.getenv("SMTP_PASSWORD");
@@ -40,12 +40,11 @@ public class MyListeners extends BaseTest implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        ITestListener.super.onTestFailure(result);
         String testName = result.getName();
         try {
             failed(result.getMethod().getMethodName());
         } catch (Exception e) {
-            e.printStackTrace();
+            extentTest.log(Status.WARNING, "Failed to capture screenshot: " + e.getMessage());
         }
         extentTest.log(Status.FAIL, testName + " got failed");
     }
@@ -63,11 +62,9 @@ public class MyListeners extends BaseTest implements ITestListener {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
         String githubPagesURL = "https://sirisha-vemparala.github.io/test4-reports/test-output/ExtentReports";
-
-        // URL of the report
         String reportURL = githubPagesURL + "/extentReport.html";
 
-        String[] recipients = {"sirishavemparala12@gmail.com", "mounika11195@gmail.com"}; // Replace with actual recipient emails
+        String[] recipients = {"sirishavemparala12@gmail.com"}; // Replace with actual recipient emails
         sendEmailWithReportURL(reportURL, timeStamp, recipients);
     }
 
@@ -76,7 +73,12 @@ public class MyListeners extends BaseTest implements ITestListener {
         String body = "Hello,\n\nPlease find the " + reportTitle + " generated at " + timeStamp + " at:\n" + reportURL + "\n\nRegards,\nYour Automation Team";
 
         if (smtpUsername != null && smtpPassword != null) {
-            EmailUtils.sendEmailWithReportURL(subject, body, smtpUsername, smtpPassword, recipients);
+            try {
+                EmailUtils.sendEmailWithReportURL(subject, body, smtpUsername, smtpPassword, recipients);
+                System.out.println("Email sent successfully to " + String.join(", ", recipients));
+            } catch (Exception e) {
+                System.err.println("Failed to send email: " + e.getMessage());
+            }
         } else {
             System.out.println("SMTP credentials (SMTP_USERNAME and SMTP_PASSWORD) are not set in environment variables.");
         }
