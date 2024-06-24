@@ -64,7 +64,7 @@ public class MyListeners extends BaseTest implements ITestListener {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
         String githubPagesURL = "https://sirisha-vemparala.github.io/test4-reports/reports";
-        String reportURL = githubPagesURL + "/indexReport.html";
+        String reportURL = githubPagesURL + "/index.html";
 
         String[] recipients = {"sirishavemparala12@gmail.com"};
         sendEmailWithReportURL(reportURL, timeStamp, recipients);
