@@ -10,11 +10,9 @@ public class ExtentReporter {
 
     public static ExtentReports generateExtentReport() {
         if (extentReport == null) {
-            
             String reportPath = System.getProperty("user.dir") + "/reports/index.html";
             ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
 
-           
             sparkReporter.config().setDocumentTitle("Automation Report");
             sparkReporter.config().setReportName("Test Report");
             sparkReporter.config().setTheme(Theme.DARK);
@@ -22,7 +20,6 @@ public class ExtentReporter {
             extentReport = new ExtentReports();
             extentReport.attachReporter(sparkReporter);
 
-            
             extentReport.setSystemInfo("Operating System", System.getProperty("os.name"));
             extentReport.setSystemInfo("Java Version", System.getProperty("java.version"));
             extentReport.setSystemInfo("User Name", System.getProperty("user.name"));
