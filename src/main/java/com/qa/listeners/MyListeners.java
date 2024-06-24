@@ -16,10 +16,12 @@ import com.qa.utils.ExtentReporter;
 public class MyListeners extends BaseTest implements ITestListener {
     private ExtentReports extentReport;
     private ExtentTest extentTest;
+    private String reportFileName;
 
     @Override
     public void onStart(ITestContext context) {
         extentReport = ExtentReporter.generateExtentReport();
+        reportFileName = ExtentReporter.getReportFileName();
     }
 
     @Override
@@ -56,11 +58,12 @@ public class MyListeners extends BaseTest implements ITestListener {
 
     private void sendReportByEmail() {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String reportPath = System.getProperty("user.dir") + "/reports/index.html";
+        String githubRepoUrl = "https://sirisha-vemparala.github.io/test4-reports/reports/";
+        String reportURL = githubRepoUrl + reportFileName;
 
         String[] recipients = {"sirishavemparala12@gmail.com"};
         String subject = "Automation Test Report";
-        String body = "Hello,\n\nPlease find the Automation Test Report generated at " + timeStamp + " at:\n" + reportPath + "\n\nRegards,\nYour Automation Team";
+        String body = "Hello,\n\nPlease find the Automation Test Report generated at " + timeStamp + " at:\n" + reportURL + "\n\nRegards,\nYour Automation Team";
 
         String smtpUsername = System.getenv("SMTP_USERNAME");
         String smtpPassword = System.getenv("SMTP_PASSWORD");
