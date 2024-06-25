@@ -66,7 +66,7 @@ public class MyListeners extends BaseTest implements ITestListener {
         String githubPagesURL = "https://sirisha-vemparala.github.io/test4-reports/reports";
         String reportURL = githubPagesURL + "/index.html";
 
-        String[] recipients = {"sirishavemparala12@gmail.com","prathyusha@keyutech.com","geetha@keyutech.com","mounika11195@gmail.com"};
+        String[] recipients = {"sirishavemparala12@gmail.com","prathyusha@keyutech.com","bharath@keyutech.com","geetha@keyutech.com","mounika11195@gmail.com"};
         sendEmailWithReportURL(reportURL, timeStamp, recipients);
     }
 
