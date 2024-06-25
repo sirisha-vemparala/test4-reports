@@ -278,4 +278,4 @@ public class InsideFeatures extends BaseTest{
         Thread.sleep(5000);
         driver.quit();
 	}
-}
+}  

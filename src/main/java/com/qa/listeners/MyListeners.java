@@ -1,8 +1,5 @@
 package com.qa.listeners;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -13,60 +10,69 @@ import com.aventstack.extentreports.Status;
 import com.qa.utils.EmailUtils;
 import com.qa.utils.ExtentReporter;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MyListeners extends BaseTest implements ITestListener {
     private ExtentReports extentReport;
     private ExtentTest extentTest;
-    private String reportFileName;
+    private final String reportTitle = "Automation Test Report";
+
+    private final String smtpUsername = System.getenv("SMTP_USERNAME");
+    private final String smtpPassword = System.getenv("SMTP_PASSWORD");
 
     @Override
     public void onStart(ITestContext context) {
         extentReport = ExtentReporter.generateExtentReport();
-        reportFileName = ExtentReporter.getReportFileName();
     }
 
     @Override
     public void onTestStart(ITestResult result) {
-        extentTest = extentReport.createTest(result.getName());
+        String testName = result.getName();
+        extentTest = extentReport.createTest(testName);
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        extentTest.log(Status.PASS, result.getName() + " executed successfully");
+        String testName = result.getName();
+        extentTest.log(Status.PASS, testName + " executed successfully");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        extentTest.log(Status.FAIL, result.getName() + " failed");
-        try {
-            captureScreenshot(result.getMethod().getMethodName());
-            extentTest.addScreenCaptureFromPath(".\\screen\\" + result.getMethod().getMethodName() + ".png");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    	ITestListener.super.onTestFailure(result);
+   		String testName = result.getName();
+   		try {
+			failed(result.getMethod().getMethodName());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        extentTest.log(Status.FAIL, testName + " got failed");
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        extentTest.log(Status.SKIP, result.getName() + " skipped");
+        String testName = result.getName();
+        extentTest.log(Status.SKIP, testName + " got skipped");
     }
 
     @Override
     public void onFinish(ITestContext context) {
         extentReport.flush();
-        sendReportByEmail();
-    }
 
-    private void sendReportByEmail() {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String githubRepoUrl = "https://sirisha-vemparala.github.io/test4-reports/reports/";
-        String reportURL = githubRepoUrl + reportFileName;
+
+        String githubPagesURL = "https://sirisha-vemparala.github.io/test4-reports/reports";
+        String reportURL = githubPagesURL + "/index.html";
 
         String[] recipients = {"sirishavemparala12@gmail.com"};
-        String subject = "Automation Test Report";
-        String body = "Hello,\n\nPlease find the Automation Test Report generated at " + timeStamp + " at:\n" + reportURL + "\n\nRegards,\nYour Automation Team";
+        sendEmailWithReportURL(reportURL, timeStamp, recipients);
+    }
 
-        String smtpUsername = System.getenv("SMTP_USERNAME");
-        String smtpPassword = System.getenv("SMTP_PASSWORD");
+    private void sendEmailWithReportURL(String reportURL, String timeStamp, String[] recipients) {
+        String subject = "Automation Test Report";
+        String body = "Hello,\n\nPlease find the " + reportTitle + " generated at " + timeStamp + " at:\n" + reportURL + "\n\nRegards,\nYour Automation Team";
 
         if (smtpUsername != null && smtpPassword != null) {
             try {
@@ -76,7 +82,7 @@ public class MyListeners extends BaseTest implements ITestListener {
                 System.err.println("Failed to send email: " + e.getMessage());
             }
         } else {
-            System.out.println("SMTP credentials are not set.");
+            System.out.println("SMTP credentials (SMTP_USERNAME and SMTP_PASSWORD) are not set in environment variables.");
         }
     }
 }
