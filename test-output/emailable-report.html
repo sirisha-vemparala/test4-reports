@@ -9,19 +9,41 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">162,515</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">137,357</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">corporate.InsideFeatures</td><td><a href="#m0">profile</a></td><td rowspan="1">1719316647901</td><td rowspan="1">4089</td></tr><tr class="failedeven"><td><a href="#m1">transaction</a></td><td rowspan="1">1719316643557</td><td rowspan="1">4154</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">corporate.InsideFeatures</td><td><a href="#m2">Adduser</a></td><td rowspan="1">1719316569403</td><td rowspan="1">33666</td></tr><tr class="passedeven"><td><a href="#m3">loadmoney</a></td><td rowspan="1">1719316603073</td><td rowspan="1">19376</td></tr><tr class="passedeven"><td><a href="#m4">login</a></td><td rowspan="1">1719316528381</td><td rowspan="1">40993</td></tr><tr class="passedeven"><td><a href="#m5">mainpage</a></td><td rowspan="1">1719316652127</td><td rowspan="1">36252</td></tr><tr class="passedeven"><td><a href="#m6">sendmoney</a></td><td rowspan="1">1719316634268</td><td rowspan="1">9286</td></tr><tr class="passedeven"><td><a href="#m7">withdraw</a></td><td rowspan="1">1719316622454</td><td rowspan="1">11811</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">corporate.InsideFeatures</td><td><a href="#m0">loadmoney</a></td><td rowspan="1">1719321285957</td><td rowspan="1">3546</td></tr><tr class="failedeven"><td><a href="#m1">profile</a></td><td rowspan="1">1719321316441</td><td rowspan="1">4144</td></tr><tr class="failedeven"><td><a href="#m2">transaction</a></td><td rowspan="1">1719321312095</td><td rowspan="1">4164</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">corporate.InsideFeatures</td><td><a href="#m3">Adduser</a></td><td rowspan="1">1719321252818</td><td rowspan="1">33135</td></tr><tr class="passedeven"><td><a href="#m4">login</a></td><td rowspan="1">1719321215832</td><td rowspan="1">36968</td></tr><tr class="passedeven"><td><a href="#m5">mainpage</a></td><td rowspan="1">1719321320793</td><td rowspan="1">29417</td></tr><tr class="passedeven"><td><a href="#m6">sendmoney</a></td><td rowspan="1">1719321302657</td><td rowspan="1">9433</td></tr><tr class="passedeven"><td><a href="#m7">withdraw</a></td><td rowspan="1">1719321289712</td><td rowspan="1">12942</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">corporate.InsideFeatures#profile</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;nav-link &quot; href=&quot;https://qa.mypursu.com/profile&quot;&gt;...&lt;/a&gt; is not clickable at point (764, 34). Other element would receive the click: &lt;div class=&quot;modal-header justify-content-center&quot;&gt;...&lt;/div&gt;
+<h2>Test</h2><h3 id="m0">corporate.InsideFeatures#loadmoney</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=126.0.6478.116)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6607bef0e4286ac03c8e50d72e73ec24, clickElement {id=f.A8EC297F9C5059140ADCF410E461E51D.d.55ECA2FDB84FE1EB9F83C0C79752B033.e.123}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56635}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56635/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6607bef0e4286ac03c8e50d72e73ec24)] -&gt; xpath: //button[text()=&apos;Load money&apos;]]
+Session ID: 6607bef0e4286ac03c8e50d72e73ec24
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at corporate.InsideFeatures.loadmoney(InsideFeatures.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">corporate.InsideFeatures#profile</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;nav-link &quot; href=&quot;https://qa.mypursu.com/profile&quot;&gt;...&lt;/a&gt; is not clickable at point (764, 34). Other element would receive the click: &lt;div class=&quot;modal-header justify-content-center&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=126.0.6478.116)
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [abaaaaa2053319f0679b957663d2d69e, clickElement {id=f.3D0C4802035532B3B818B3712CA8A311.d.B1A51576B13457EC1E9C3BD0658F397D.e.283}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51189}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51189/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (abaaaaa2053319f0679b957663d2d69e)] -&gt; xpath: //a[contains(text(),&apos;Profile&apos;)]]
-Session ID: abaaaaa2053319f0679b957663d2d69e
+Command: [6607bef0e4286ac03c8e50d72e73ec24, clickElement {id=f.A8EC297F9C5059140ADCF410E461E51D.d.D89341FD299DDC4DD870AF6E867012FA.e.231}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56635}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56635/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6607bef0e4286ac03c8e50d72e73ec24)] -&gt; xpath: //a[contains(text(),&apos;Profile&apos;)]]
+Session ID: 6607bef0e4286ac03c8e50d72e73ec24
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -34,15 +56,15 @@ Session ID: abaaaaa2053319f0679b957663d2d69e
 	at corporate.InsideFeatures.profile(InsideFeatures.java:167)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">corporate.InsideFeatures#transaction</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;btn btn-outline-secondary&quot;&gt;...&lt;/button&gt; is not clickable at point (1044, 214). Other element would receive the click: &lt;div class=&quot;modal fade show&quot; id=&quot;employeeTotalAmountLoaded&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;employeeTotalAmountLoadedLabel&quot; aria-modal=&quot;true&quot; role=&quot;dialog&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
+<h3 id="m2">corporate.InsideFeatures#transaction</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;btn btn-outline-secondary&quot;&gt;...&lt;/button&gt; is not clickable at point (1044, 214). Other element would receive the click: &lt;div class=&quot;modal fade show&quot; id=&quot;employeeTotalAmountLoaded&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;employeeTotalAmountLoadedLabel&quot; aria-modal=&quot;true&quot; role=&quot;dialog&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=126.0.6478.116)
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [abaaaaa2053319f0679b957663d2d69e, clickElement {id=f.3D0C4802035532B3B818B3712CA8A311.d.B1A51576B13457EC1E9C3BD0658F397D.e.282}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51189}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51189/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (abaaaaa2053319f0679b957663d2d69e)] -&gt; xpath: //button[contains(text(),&apos;Transaction&apos;)]]
-Session ID: abaaaaa2053319f0679b957663d2d69e
+Command: [6607bef0e4286ac03c8e50d72e73ec24, clickElement {id=f.A8EC297F9C5059140ADCF410E461E51D.d.D89341FD299DDC4DD870AF6E867012FA.e.230}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56635}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56635/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6607bef0e4286ac03c8e50d72e73ec24)] -&gt; xpath: //button[contains(text(),&apos;Transaction&apos;)]]
+Session ID: 6607bef0e4286ac03c8e50d72e73ec24
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -55,8 +77,7 @@ Session ID: abaaaaa2053319f0679b957663d2d69e
 	at corporate.InsideFeatures.transaction(InsideFeatures.java:118)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">corporate.InsideFeatures#Adduser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">corporate.InsideFeatures#loadmoney</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">corporate.InsideFeatures#Adduser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m4">corporate.InsideFeatures#login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m5">corporate.InsideFeatures#mainpage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m6">corporate.InsideFeatures#sendmoney</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>

@@ -23,13 +23,14 @@ public class MyListeners extends BaseTest implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
-        extentReport = ExtentReporter.generateExtentReport();
+        extentReport = ExtentReporter.getExtentReport(); // Ensure the method name is correct
     }
 
     @Override
     public void onTestStart(ITestResult result) {
         String testName = result.getName();
         extentTest = extentReport.createTest(testName);
+        extentTest.log(Status.INFO, testName + " started executing");
     }
 
     @Override
@@ -40,21 +41,25 @@ public class MyListeners extends BaseTest implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-    	ITestListener.super.onTestFailure(result);
-   		String testName = result.getName();
-   		try {
-			failed(result.getMethod().getMethodName());
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        String testName = result.getName();
+        Throwable throwable = result.getThrowable();
+
         extentTest.log(Status.FAIL, testName + " got failed");
+        extentTest.log(Status.FAIL, throwable);
+
+        try {
+            failed(result.getMethod().getMethodName());
+        } catch (Exception e) {
+            extentTest.log(Status.WARNING, "Error in capturing failure details: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
         String testName = result.getName();
         extentTest.log(Status.SKIP, testName + " got skipped");
+        extentTest.log(Status.SKIP, result.getThrowable());
     }
 
     @Override
@@ -66,7 +71,7 @@ public class MyListeners extends BaseTest implements ITestListener {
         String githubPagesURL = "https://sirisha-vemparala.github.io/test4-reports/reports";
         String reportURL = githubPagesURL + "/index.html";
 
-        String[] recipients = {"sirishavemparala12@gmail.com","prathyusha@keyutech.com","bharath@keyutech.com","geetha@keyutech.com","mounika11195@gmail.com"};
+        String[] recipients = {"sirishavemparala12@gmail.com", "prathyusha@keyutech.com", "geetha@keyutech.com", "mounika11195@gmail.com"};
         sendEmailWithReportURL(reportURL, timeStamp, recipients);
     }
 
