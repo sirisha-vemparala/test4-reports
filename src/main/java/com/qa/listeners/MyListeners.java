@@ -61,18 +61,18 @@ public class MyListeners extends BaseTest implements ITestListener {
     public void onFinish(ITestContext context) {
         extentReport.flush();
 
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(new Date());
 
         String githubPagesURL = "https://sirisha-vemparala.github.io/test4-reports/reports";
         String reportURL = githubPagesURL + "/index.html";
 
-        String[] recipients = {"sirishavemparala12@gmail.com"};
+        String[] recipients = {"sirishavemparala12@gmail.com","prathyusha@keyutech.com","bharath@keyutech.com","geetha@keyutech.com","mounika11195@gmail.com"};
         sendEmailWithReportURL(reportURL, timeStamp, recipients);
     }
 
     private void sendEmailWithReportURL(String reportURL, String timeStamp, String[] recipients) {
         String subject = "Automation Test Report";
-        String body = "Hello,\n\nPlease find the " + reportTitle + " generated at " + timeStamp + " at:\n" + reportURL + "\n\nRegards,\nYour Automation Team";
+        String body = "Hello MyPursu Team,\n\nPlease find the " + reportTitle + " generated at " + timeStamp + " at:\n" + reportURL + "\n\nRegards,\nYour Automation Team";
 
         if (smtpUsername != null && smtpPassword != null) {
             try {
