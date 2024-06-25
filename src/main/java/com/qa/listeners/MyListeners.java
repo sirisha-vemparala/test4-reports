@@ -1,5 +1,16 @@
 package com.qa.listeners;
 
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Base64;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import java.nio.file.Files;
+
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -7,11 +18,9 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+
 import com.qa.utils.EmailUtils;
 import com.qa.utils.ExtentReporter;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class MyListeners extends BaseTest implements ITestListener {
     private ExtentReports extentReport;
@@ -102,12 +111,38 @@ public class MyListeners extends BaseTest implements ITestListener {
     private void uploadReportToGitHub(String reportFilePath, String reportFileName) {
         if (githubToken != null) {
             try {
-                // Your upload logic here (already provided in previous messages)
-            } catch (Exception e) {
+                byte[] reportBytes = Files.readAllBytes(Paths.get(reportFilePath));
+                String encodedReport = Base64.getEncoder().encodeToString(reportBytes);
+                String githubApiUrl = "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contents/reports/" + reportFileName;
+
+                Map<String, String> jsonPayloadMap = new HashMap<>();
+                jsonPayloadMap.put("message", "Upload test report");
+                jsonPayloadMap.put("content", encodedReport);
+
+                String jsonPayload = new com.google.gson.Gson().toJson(jsonPayloadMap);
+
+                java.net.HttpURLConnection connection = (java.net.HttpURLConnection) new java.net.URL(githubApiUrl).openConnection();
+                connection.setDoOutput(true);
+                connection.setRequestMethod("PUT");
+                connection.setRequestProperty("Authorization", "Bearer " + githubToken);
+                connection.setRequestProperty("Content-Type", "application/json");
+                try (java.io.OutputStream os = connection.getOutputStream()) {
+                    byte[] input = jsonPayload.getBytes("utf-8");
+                    os.write(input, 0, input.length);
+                }
+
+                int responseCode = connection.getResponseCode();
+                if (responseCode == 201 || responseCode == 200) {
+                    System.out.println("Report uploaded successfully to GitHub.");
+                } else {
+                    System.err.println("Failed to upload report to GitHub. Response code: " + responseCode);
+                }
+            } catch (IOException e) {
                 System.err.println("Failed to upload report to GitHub: " + e.getMessage());
             }
         } else {
             System.out.println("GitHub token (GITHUB_TOKEN) is not set in environment variables.");
         }
     }
+
 }
