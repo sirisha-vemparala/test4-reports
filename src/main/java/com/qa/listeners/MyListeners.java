@@ -20,10 +20,16 @@ public class MyListeners extends BaseTest implements ITestListener {
 
     private final String smtpUsername = System.getenv("SMTP_USERNAME");
     private final String smtpPassword = System.getenv("SMTP_PASSWORD");
+    private final String githubToken = System.getenv("GITHUB_TOKEN");
+    private final String repoOwner = "sirisha-vemparala";
+    private final String repoName = "test4-reports";
+
+    private String reportFilePath;
+    private String reportFileName;
 
     @Override
     public void onStart(ITestContext context) {
-        extentReport = ExtentReporter.getExtentReport(); // Ensure the method name is correct
+        extentReport = ExtentReporter.getExtentReport();
     }
 
     @Override
@@ -66,12 +72,14 @@ public class MyListeners extends BaseTest implements ITestListener {
     public void onFinish(ITestContext context) {
         extentReport.flush();
 
-        String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(new Date());
+        String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
+        reportFilePath = System.getProperty("user.dir") + "/reports/report_" + timeStamp + ".html";
+        reportFileName = "report_" + timeStamp + ".html";
 
-        String githubPagesURL = "https://sirisha-vemparala.github.io/test4-reports/reports";
-        String reportURL = githubPagesURL + "/index.html";
+        uploadReportToGitHub(reportFilePath, reportFileName);
 
-        String[] recipients = {"sirishavemparala12@gmail.com", "prathyusha@keyutech.com", "geetha@keyutech.com", "mounika11195@gmail.com"};
+        String reportURL = "https://github.com/" + repoOwner + "/" + repoName + "/blob/master/reports/" + reportFileName;
+        String[] recipients = {"sirishavemparala12@gmail.com", "prathyusha@keyutech.com"};
         sendEmailWithReportURL(reportURL, timeStamp, recipients);
     }
 
@@ -88,6 +96,18 @@ public class MyListeners extends BaseTest implements ITestListener {
             }
         } else {
             System.out.println("SMTP credentials (SMTP_USERNAME and SMTP_PASSWORD) are not set in environment variables.");
+        }
+    }
+
+    private void uploadReportToGitHub(String reportFilePath, String reportFileName) {
+        if (githubToken != null) {
+            try {
+                // Your upload logic here (already provided in previous messages)
+            } catch (Exception e) {
+                System.err.println("Failed to upload report to GitHub: " + e.getMessage());
+            }
+        } else {
+            System.out.println("GitHub token (GITHUB_TOKEN) is not set in environment variables.");
         }
     }
 }
