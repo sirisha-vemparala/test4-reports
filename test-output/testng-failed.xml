@@ -10,7 +10,6 @@
         <methods>
           <include name="profile"/>
           <include name="loadmoney"/>
-          <include name="sendmoney"/>
           <include name="withdraw"/>
           <include name="Adduser"/>
           <include name="setup"/>
