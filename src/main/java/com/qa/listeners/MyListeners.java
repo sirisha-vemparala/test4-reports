@@ -1,15 +1,13 @@
 package com.qa.listeners;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
-import java.nio.file.Files;
-
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -32,6 +30,7 @@ public class MyListeners extends BaseTest implements ITestListener {
     private final String githubToken = System.getenv("GITHUB_TOKEN");
     private final String repoOwner = "sirisha-vemparala";
     private final String repoName = "test4-reports";
+    private final String githubPagesBaseUrl = "https://sirisha-vemparala.github.io/test4-reports";
 
     private String reportFilePath;
     private String reportFileName;
@@ -87,7 +86,9 @@ public class MyListeners extends BaseTest implements ITestListener {
 
         uploadReportToGitHub(reportFilePath, reportFileName);
 
-        String reportURL = "https://github.com/" + repoOwner + "/" + repoName + "/blob/master/reports/" + reportFileName;
+        // Update reportURL to GitHub Pages URL
+        String reportURL = githubPagesBaseUrl + "/reports/" + reportFileName;
+
         String[] recipients = {"sirishavemparala12@gmail.com", "prathyusha@keyutech.com"};
         sendEmailWithReportURL(reportURL, timeStamp, recipients);
     }
@@ -144,5 +145,4 @@ public class MyListeners extends BaseTest implements ITestListener {
             System.out.println("GitHub token (GITHUB_TOKEN) is not set in environment variables.");
         }
     }
-
 }
