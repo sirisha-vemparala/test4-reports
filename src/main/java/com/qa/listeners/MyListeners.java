@@ -1,4 +1,5 @@
 package com.qa.listeners;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -15,6 +16,7 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+
 import com.qa.utils.EmailUtils;
 import com.qa.utils.ExtentReporter;
 
@@ -78,22 +80,22 @@ public class MyListeners extends BaseTest implements ITestListener {
     public void onFinish(ITestContext context) {
         extentReport.flush();
 
-        // Retrieve the generated report path from ExtentReports
-        reportFilePath = ExtentReporter.getReportFilePath();
-        reportFileName = reportFilePath.substring(reportFilePath.lastIndexOf("/") + 1);
+        String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
+        reportFilePath = System.getProperty("user.dir") + "/reports/report_" + timeStamp + ".html";
+        reportFileName = "report_" + timeStamp + ".html";
 
         uploadReportToGitHub(reportFilePath, reportFileName);
 
         // Update reportURL to GitHub Pages URL
         String reportURL = githubPagesBaseUrl + "/reports/" + reportFileName;
 
-        String[] recipients = {"sirishavemparala12@gmail.com"};
-        sendEmailWithReportURL(reportURL, new Date(), recipients);
+        String[] recipients = {"sirishavemparala12@gmail.com", "prathyusha@keyutech.com"};
+        sendEmailWithReportURL(reportURL, timeStamp, recipients);
     }
 
-    private void sendEmailWithReportURL(String reportURL, Date timeStamp, String[] recipients) {
+    private void sendEmailWithReportURL(String reportURL, String timeStamp, String[] recipients) {
         String subject = "Automation Test Report";
-        String body = "Hello MyPursu Team,\n\nPlease find the " + reportTitle + " generated at " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(timeStamp) + " at:\n" + reportURL + "\n\nRegards,\nYour Automation Team";
+        String body = "Hello MyPursu Team,\n\nPlease find the " + reportTitle + " generated at " + timeStamp + " at:\n" + reportURL + "\n\nRegards,\nYour Automation Team";
 
         if (smtpUsername != null && smtpPassword != null) {
             try {
