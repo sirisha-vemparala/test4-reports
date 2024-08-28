@@ -1,25 +1,18 @@
 package com.qa.listeners;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.text.SimpleDateFormat;
-import java.util.Base64;
 import java.util.Date;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.qa.utils.EmailUtils;
 import com.qa.utils.ExtentReporter;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
+import com.qa.utils.GitUtils;
 
 public class MyListeners extends BaseTest implements ITestListener {
     private ExtentReports extentReport;
@@ -110,35 +103,8 @@ public class MyListeners extends BaseTest implements ITestListener {
         }
     }
 
-    private void uploadReportToGitHub(String filePath, String fileName) {
-        try {
-            File file = new File(filePath);
-            byte[] fileContent = Files.readAllBytes(file.toPath());
-            String encodedContent = Base64.getEncoder().encodeToString(fileContent);
-
-            String url = "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contents/" + fileName;
-            String jsonBody = String.format("{\"message\": \"Add report file %s\", \"content\": \"%s\"}", fileName, encodedContent);
-
-            CloseableHttpClient httpClient = HttpClients.createDefault();
-            HttpPost uploadFile = new HttpPost(url);
-
-            uploadFile.setHeader("Authorization", "token " + githubToken);
-            uploadFile.setHeader("Content-Type", "application/json");
-            uploadFile.setEntity(new StringEntity(jsonBody));
-
-            try (CloseableHttpResponse response = httpClient.execute(uploadFile)) {
-                String responseString = EntityUtils.toString(response.getEntity());
-
-                if (response.getStatusLine().getStatusCode() == 201) {
-                    System.out.println("Report uploaded successfully: " + responseString);
-                } else {
-                    System.err.println("Failed to upload report: " + responseString);
-                }
-            }
-
-            httpClient.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    private void uploadReportToGitHub(String reportFilePath, String reportFileName) {
+        // GitUtils to commit and push the report to GitHub
+        GitUtils.commitAndPush("Automated report upload: " + reportFileName);
     }
 }
