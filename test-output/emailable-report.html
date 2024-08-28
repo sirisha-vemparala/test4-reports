@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">408,062</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">corporate.InsideFeatures</td><td><a href="#m0">allTransactions</a></td><td rowspan="1">1724839645526</td><td rowspan="1">13558</td></tr><tr class="failedeven"><td><a href="#m1">requestMoneyBack</a></td><td rowspan="1">1724839659339</td><td rowspan="1">15115</td></tr><tr class="failedeven"><td><a href="#m2">transaction</a></td><td rowspan="1">1724839628526</td><td rowspan="1">16775</td></tr><tr class="failedeven"><td><a href="#m3">withdraw</a></td><td rowspan="1">1724839581060</td><td rowspan="1">37133</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">corporate.InsideFeatures</td><td><a href="#m4">Adduser</a></td><td rowspan="1">1724839513813</td><td rowspan="1">46707</td></tr><tr class="passedeven"><td><a href="#m5">Signup</a></td><td rowspan="1">1724839420903</td><td rowspan="1">47317</td></tr><tr class="passedeven"><td><a href="#m6">loadmoney</a></td><td rowspan="1">1724839560524</td><td rowspan="1">20530</td></tr><tr class="passedeven"><td><a href="#m7">login</a></td><td rowspan="1">1724839468233</td><td rowspan="1">45576</td></tr><tr class="passedeven"><td><a href="#m8">mainpage</a></td><td rowspan="1">1724839767894</td><td rowspan="1">37669</td></tr><tr class="passedeven"><td><a href="#m9">profile</a></td><td rowspan="1">1724839675081</td><td rowspan="1">92805</td></tr><tr class="passedeven"><td><a href="#m10">sendmoney</a></td><td rowspan="1">1724839618500</td><td rowspan="1">10022</td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">corporate.InsideFeatures#allTransactions</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;All&apos;)]&quot;}
+  (Session info: chrome=128.0.6613.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ea0aca708f668d45c5068c942cca30b3, findElement {using=xpath, value=//a[contains(text(),&apos;All&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51547}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51547/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ea0aca708f668d45c5068c942cca30b3
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at corporate.InsideFeatures.allTransactions(InsideFeatures.java:269)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">corporate.InsideFeatures#requestMoneyBack</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;UserListTable&quot;]/tbody/tr[1]/td[6]/span/a[3]&quot;}
+  (Session info: chrome=128.0.6613.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ea0aca708f668d45c5068c942cca30b3, findElement {using=xpath, value=//*[@id=&quot;UserListTable&quot;]/tbody/tr[1]/td[6]/span/a[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51547}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51547/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ea0aca708f668d45c5068c942cca30b3
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at corporate.InsideFeatures.requestMoneyBack(InsideFeatures.java:289)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">corporate.InsideFeatures#transaction</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: All
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at corporate.InsideFeatures.transaction(InsideFeatures.java:219)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">corporate.InsideFeatures#withdraw</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;toast-title&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at corporate.InsideFeatures.withdraw(InsideFeatures.java:246)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;toast-title&apos;]&quot;}
+  (Session info: chrome=128.0.6613.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ea0aca708f668d45c5068c942cca30b3, findElement {using=xpath, value=//div[@class=&apos;toast-title&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51547}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51547/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ea0aca708f668d45c5068c942cca30b3
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">corporate.InsideFeatures#Adduser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">corporate.InsideFeatures#Signup</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">corporate.InsideFeatures#loadmoney</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">corporate.InsideFeatures#login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">corporate.InsideFeatures#mainpage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">corporate.InsideFeatures#profile</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">corporate.InsideFeatures#sendmoney</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
