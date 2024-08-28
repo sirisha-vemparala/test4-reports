@@ -10,7 +10,6 @@
         <methods>
           <include name="requestMoneyBack"/>
           <include name="withdraw"/>
-          <include name="Adduser"/>
           <include name="allTransactions"/>
           <include name="setup"/>
           <include name="transaction"/>
