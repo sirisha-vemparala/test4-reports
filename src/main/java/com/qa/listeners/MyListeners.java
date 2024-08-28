@@ -125,6 +125,8 @@ public class MyListeners extends BaseTest implements ITestListener {
                 connection.setRequestMethod("PUT");
                 connection.setRequestProperty("Authorization", "Bearer " + githubToken);
                 connection.setRequestProperty("Content-Type", "application/json");
+                connection.setRequestProperty("Accept", "application/vnd.github.v3+json");
+                connection.setRequestProperty("User-Agent", "Java-Client");
                 try (java.io.OutputStream os = connection.getOutputStream()) {
                     byte[] input = jsonPayload.getBytes("utf-8");
                     os.write(input, 0, input.length);
@@ -135,6 +137,13 @@ public class MyListeners extends BaseTest implements ITestListener {
                     System.out.println("Report uploaded successfully to GitHub.");
                 } else {
                     System.err.println("Failed to upload report to GitHub. Response code: " + responseCode);
+                    try (java.io.InputStream is = connection.getErrorStream()) {
+                        if (is != null) {
+                            java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
+                            String errorResponse = s.hasNext() ? s.next() : "";
+                            System.err.println("Error response: " + errorResponse);
+                        }
+                    }
                 }
             } catch (IOException e) {
                 System.err.println("Failed to upload report to GitHub: " + e.getMessage());
@@ -143,4 +152,5 @@ public class MyListeners extends BaseTest implements ITestListener {
             System.out.println("GitHub token (GITHUB_TOKEN) is not set in environment variables.");
         }
     }
+
 }
