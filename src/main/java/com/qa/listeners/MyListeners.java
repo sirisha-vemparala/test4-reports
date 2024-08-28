@@ -1,4 +1,5 @@
 package com.qa.listeners;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -108,8 +109,14 @@ public class MyListeners extends BaseTest implements ITestListener {
     }
 
     private void uploadReportToGitHub(String reportFilePath, String reportFileName) {
-        if (githubToken != null) {
+        if (githubToken != null && !githubToken.trim().isEmpty()) {
             try {
+                File file = new File(reportFilePath);
+                if (!file.exists()) {
+                    System.err.println("Report file does not exist: " + reportFilePath);
+                    return;
+                }
+
                 byte[] reportBytes = Files.readAllBytes(Paths.get(reportFilePath));
                 String encodedReport = Base64.getEncoder().encodeToString(reportBytes);
                 String githubApiUrl = "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contents/reports/" + reportFileName;
@@ -127,6 +134,7 @@ public class MyListeners extends BaseTest implements ITestListener {
                 connection.setRequestProperty("Content-Type", "application/json");
                 connection.setRequestProperty("Accept", "application/vnd.github.v3+json");
                 connection.setRequestProperty("User-Agent", "Java-Client");
+
                 try (java.io.OutputStream os = connection.getOutputStream()) {
                     byte[] input = jsonPayload.getBytes("utf-8");
                     os.write(input, 0, input.length);
@@ -149,8 +157,9 @@ public class MyListeners extends BaseTest implements ITestListener {
                 System.err.println("Failed to upload report to GitHub: " + e.getMessage());
             }
         } else {
-            System.out.println("GitHub token (GITHUB_TOKEN) is not set in environment variables.");
+            System.out.println("GitHub token (GITHUB_TOKEN) is not set or is empty.");
         }
     }
+
 
 }
