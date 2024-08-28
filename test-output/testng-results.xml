@@ -2,46 +2,46 @@
 <testng-results ignored="0" total="11" passed="6" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-28T19:07:46 IST" name="Suite" finished-at="2024-08-28T19:13:51 IST" duration-ms="365352">
+  <suite started-at="2024-08-28T21:04:00 IST" name="Suite" finished-at="2024-08-28T21:10:51 IST" duration-ms="410909">
     <groups>
     </groups>
-    <test started-at="2024-08-28T19:07:46 IST" name="Test" finished-at="2024-08-28T19:13:51 IST" duration-ms="365352">
+    <test started-at="2024-08-28T21:04:00 IST" name="Test" finished-at="2024-08-28T21:10:51 IST" duration-ms="410909">
       <class name="corporate.InsideFeatures">
-        <test-method is-config="true" signature="setup()[pri:0, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:07:46 IST" name="setup" finished-at="2024-08-28T19:07:56 IST" duration-ms="9336" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:04:00 IST" name="setup" finished-at="2024-08-28T21:04:06 IST" duration-ms="5331" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Signup()[pri:1, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:07:56 IST" name="Signup" finished-at="2024-08-28T19:08:43 IST" duration-ms="46794" status="PASS">
+        <test-method signature="Signup()[pri:1, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:04:06 IST" name="Signup" finished-at="2024-08-28T21:04:57 IST" duration-ms="51710" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Signup -->
-        <test-method signature="login()[pri:2, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:08:43 IST" name="login" finished-at="2024-08-28T19:09:19 IST" duration-ms="36601" status="PASS">
+        <test-method signature="login()[pri:2, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:04:57 IST" name="login" finished-at="2024-08-28T21:05:43 IST" duration-ms="45765" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="Adduser()[pri:3, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:09:19 IST" name="Adduser" finished-at="2024-08-28T19:10:05 IST" duration-ms="45367" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="Adduser()[pri:3, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:05:43 IST" name="Adduser" finished-at="2024-08-28T21:06:40 IST" duration-ms="56319" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//td[@align='left']//p[4]"}
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=128.0.6613.85)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b3d5b61adac6676c025840158e24e6e6, findElement {using=xpath, value=//td[@align='left']//p[4]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49922}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49922/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b3d5b61adac6676c025840158e24e6e6]]>
+Command: [e1b16add81dba6e1e902e7018c05236c, findElement {using=xpath, value=//iframe[@id='ifmail']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53143}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53143/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e1b16add81dba6e1e902e7018c05236c]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[@align='left']//p[4]"}
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=128.0.6613.85)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b3d5b61adac6676c025840158e24e6e6, findElement {using=xpath, value=//td[@align='left']//p[4]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49922}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49922/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b3d5b61adac6676c025840158e24e6e6
+Command: [e1b16add81dba6e1e902e7018c05236c, findElement {using=xpath, value=//iframe[@id='ifmail']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53143}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53143/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e1b16add81dba6e1e902e7018c05236c
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -58,7 +58,7 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-at corporate.InsideFeatures.Adduser(InsideFeatures.java:176)
+at corporate.InsideFeatures.Adduser(InsideFeatures.java:174)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -89,15 +89,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Adduser -->
-        <test-method signature="loadmoney()[pri:4, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:10:05 IST" name="loadmoney" finished-at="2024-08-28T19:10:24 IST" duration-ms="19410" status="PASS">
+        <test-method signature="loadmoney()[pri:4, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:06:40 IST" name="loadmoney" finished-at="2024-08-28T21:07:05 IST" duration-ms="25118" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadmoney -->
-        <test-method signature="withdraw()[pri:5, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:10:24 IST" name="withdraw" finished-at="2024-08-28T19:11:01 IST" duration-ms="36978" status="FAIL">
+        <test-method signature="withdraw()[pri:5, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:07:05 IST" name="withdraw" finished-at="2024-08-28T21:07:43 IST" duration-ms="37680" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='toast-title'] (tried for 30 second(s) with 500 milliseconds interval)]]>
@@ -141,9 +141,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9afb46073701f10b91d5df3a7d8e9469, findElement {using=xpath, value=//div[@class='toast-title']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49296}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49296/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9afb46073701f10b91d5df3a7d8e9469
+Command: [63e4224dafec6b699f2eb9413687dcbc, findElement {using=xpath, value=//div[@class='toast-title']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52837/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63e4224dafec6b699f2eb9413687dcbc
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -170,11 +170,11 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- withdraw -->
-        <test-method signature="sendmoney()[pri:6, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:11:01 IST" name="sendmoney" finished-at="2024-08-28T19:11:11 IST" duration-ms="9706" status="PASS">
+        <test-method signature="sendmoney()[pri:6, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:07:43 IST" name="sendmoney" finished-at="2024-08-28T21:07:53 IST" duration-ms="10199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendmoney -->
-        <test-method signature="transaction()[pri:7, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:11:11 IST" name="transaction" finished-at="2024-08-28T19:11:27 IST" duration-ms="15938" status="FAIL">
+        <test-method signature="transaction()[pri:7, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:07:53 IST" name="transaction" finished-at="2024-08-28T21:08:11 IST" duration-ms="18023" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Cannot locate element with text: All
@@ -225,7 +225,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- transaction -->
-        <test-method signature="allTransactions()[pri:8, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:11:27 IST" name="allTransactions" finished-at="2024-08-28T19:11:41 IST" duration-ms="13390" status="FAIL">
+        <test-method signature="allTransactions()[pri:8, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:08:11 IST" name="allTransactions" finished-at="2024-08-28T21:08:25 IST" duration-ms="13530" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'All')]"}
@@ -234,9 +234,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9afb46073701f10b91d5df3a7d8e9469, findElement {using=xpath, value=//a[contains(text(),'All')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49296}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49296/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9afb46073701f10b91d5df3a7d8e9469]]>
+Command: [63e4224dafec6b699f2eb9413687dcbc, findElement {using=xpath, value=//a[contains(text(),'All')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52837/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63e4224dafec6b699f2eb9413687dcbc]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'All')]"}
@@ -245,9 +245,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9afb46073701f10b91d5df3a7d8e9469, findElement {using=xpath, value=//a[contains(text(),'All')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49296}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49296/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9afb46073701f10b91d5df3a7d8e9469
+Command: [63e4224dafec6b699f2eb9413687dcbc, findElement {using=xpath, value=//a[contains(text(),'All')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52837/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63e4224dafec6b699f2eb9413687dcbc
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -299,7 +299,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- allTransactions -->
-        <test-method signature="requestMoneyBack()[pri:9, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:11:41 IST" name="requestMoneyBack" finished-at="2024-08-28T19:11:56 IST" duration-ms="15072" status="FAIL">
+        <test-method signature="requestMoneyBack()[pri:9, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:08:25 IST" name="requestMoneyBack" finished-at="2024-08-28T21:08:40 IST" duration-ms="15037" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="UserListTable"]/tbody/tr[1]/td[6]/span/a[3]"}
@@ -308,9 +308,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9afb46073701f10b91d5df3a7d8e9469, findElement {using=xpath, value=//*[@id="UserListTable"]/tbody/tr[1]/td[6]/span/a[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49296}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49296/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9afb46073701f10b91d5df3a7d8e9469]]>
+Command: [63e4224dafec6b699f2eb9413687dcbc, findElement {using=xpath, value=//*[@id="UserListTable"]/tbody/tr[1]/td[6]/span/a[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52837/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63e4224dafec6b699f2eb9413687dcbc]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="UserListTable"]/tbody/tr[1]/td[6]/span/a[3]"}
@@ -319,9 +319,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9afb46073701f10b91d5df3a7d8e9469, findElement {using=xpath, value=//*[@id="UserListTable"]/tbody/tr[1]/td[6]/span/a[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49296}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49296/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9afb46073701f10b91d5df3a7d8e9469
+Command: [63e4224dafec6b699f2eb9413687dcbc, findElement {using=xpath, value=//*[@id="UserListTable"]/tbody/tr[1]/td[6]/span/a[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52837/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63e4224dafec6b699f2eb9413687dcbc
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -373,11 +373,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- requestMoneyBack -->
-        <test-method signature="profile()[pri:10, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:11:56 IST" name="profile" finished-at="2024-08-28T19:13:20 IST" duration-ms="84458" status="PASS">
+        <test-method signature="profile()[pri:10, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:08:40 IST" name="profile" finished-at="2024-08-28T21:10:06 IST" duration-ms="86019" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- profile -->
-        <test-method signature="mainpage()[pri:11, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T19:13:20 IST" name="mainpage" finished-at="2024-08-28T19:13:51 IST" duration-ms="30922" status="PASS">
+        <test-method signature="mainpage()[pri:11, instance:corporate.InsideFeatures@26d9b808]" started-at="2024-08-28T21:10:06 IST" name="mainpage" finished-at="2024-08-28T21:10:51 IST" duration-ms="44840" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mainpage -->

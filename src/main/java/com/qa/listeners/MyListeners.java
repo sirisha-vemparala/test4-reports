@@ -1,23 +1,27 @@
 package com.qa.listeners;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Base64;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.qa.utils.EmailUtils;
 import com.qa.utils.ExtentReporter;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 
 public class MyListeners extends BaseTest implements ITestListener {
     private ExtentReports extentReport;
@@ -108,58 +112,30 @@ public class MyListeners extends BaseTest implements ITestListener {
         }
     }
 
-    private void uploadReportToGitHub(String reportFilePath, String reportFileName) {
-        if (githubToken != null && !githubToken.trim().isEmpty()) {
-            try {
-                File file = new File(reportFilePath);
-                if (!file.exists()) {
-                    System.err.println("Report file does not exist: " + reportFilePath);
-                    return;
+    private void uploadReportToGitHub(String filePath, String fileName) {
+        String url = "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contents/reports/" + fileName;
+
+        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+            File file = new File(filePath);
+            byte[] fileContent = Files.readAllBytes(file.toPath());
+            String base64Content = Base64.getEncoder().encodeToString(fileContent);
+
+            String json = String.format("{\"message\": \"Upload report %s\",\"content\": \"%s\"}", fileName, base64Content);
+
+            HttpPost uploadFile = new HttpPost(url);
+            uploadFile.setHeader("Authorization", "token " + githubToken);
+            uploadFile.setHeader("Accept", "application/vnd.github.v3+json");
+            uploadFile.setEntity(new StringEntity(json, ContentType.APPLICATION_JSON));
+
+            try (CloseableHttpResponse response = httpClient.execute(uploadFile)) {
+                HttpEntity entity = response.getEntity();
+                if (entity != null) {
+                    String result = EntityUtils.toString(entity);
+                    System.out.println("GitHub upload response: " + result);
                 }
-
-                byte[] reportBytes = Files.readAllBytes(Paths.get(reportFilePath));
-                String encodedReport = Base64.getEncoder().encodeToString(reportBytes);
-                String githubApiUrl = "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contents/reports/" + reportFileName;
-
-                Map<String, String> jsonPayloadMap = new HashMap<>();
-                jsonPayloadMap.put("message", "Upload test report");
-                jsonPayloadMap.put("content", encodedReport);
-
-                String jsonPayload = new com.google.gson.Gson().toJson(jsonPayloadMap);
-
-                java.net.HttpURLConnection connection = (java.net.HttpURLConnection) new java.net.URL(githubApiUrl).openConnection();
-                connection.setDoOutput(true);
-                connection.setRequestMethod("PUT");
-                connection.setRequestProperty("Authorization", "Bearer " + githubToken);
-                connection.setRequestProperty("Content-Type", "application/json");
-                connection.setRequestProperty("Accept", "application/vnd.github.v3+json");
-                connection.setRequestProperty("User-Agent", "Java-Client");
-
-                try (java.io.OutputStream os = connection.getOutputStream()) {
-                    byte[] input = jsonPayload.getBytes("utf-8");
-                    os.write(input, 0, input.length);
-                }
-
-                int responseCode = connection.getResponseCode();
-                if (responseCode == 201 || responseCode == 200) {
-                    System.out.println("Report uploaded successfully to GitHub.");
-                } else {
-                    System.err.println("Failed to upload report to GitHub. Response code: " + responseCode);
-                    try (java.io.InputStream is = connection.getErrorStream()) {
-                        if (is != null) {
-                            java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
-                            String errorResponse = s.hasNext() ? s.next() : "";
-                            System.err.println("Error response: " + errorResponse);
-                        }
-                    }
-                }
-            } catch (IOException e) {
-                System.err.println("Failed to upload report to GitHub: " + e.getMessage());
             }
-        } else {
-            System.out.println("GitHub token (GITHUB_TOKEN) is not set or is empty.");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
-
-
 }

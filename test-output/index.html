@@ -189,15 +189,15 @@
                   <a name="Adduser">
                   </a> <!-- Adduser -->
                   <span class="method-name">Adduser</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[@align=&apos;left&apos;]//p[4]&quot;}
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=128.0.6613.85)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b3d5b61adac6676c025840158e24e6e6, findElement {using=xpath, value=//td[@align=&apos;left&apos;]//p[4]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49922}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49922/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b3d5b61adac6676c025840158e24e6e6
+Command: [e1b16add81dba6e1e902e7018c05236c, findElement {using=xpath, value=//iframe[@id=&apos;ifmail&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53143}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53143/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e1b16add81dba6e1e902e7018c05236c
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -209,7 +209,7 @@ Session ID: b3d5b61adac6676c025840158e24e6e6
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at corporate.InsideFeatures.Adduser(InsideFeatures.java:176)
+	at corporate.InsideFeatures.Adduser(InsideFeatures.java:174)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
@@ -226,9 +226,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9afb46073701f10b91d5df3a7d8e9469, findElement {using=xpath, value=//a[contains(text(),&apos;All&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49296}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49296/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9afb46073701f10b91d5df3a7d8e9469
+Command: [63e4224dafec6b699f2eb9413687dcbc, findElement {using=xpath, value=//a[contains(text(),&apos;All&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52837/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63e4224dafec6b699f2eb9413687dcbc
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -257,9 +257,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9afb46073701f10b91d5df3a7d8e9469, findElement {using=xpath, value=//*[@id=&quot;UserListTable&quot;]/tbody/tr[1]/td[6]/span/a[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49296}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49296/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9afb46073701f10b91d5df3a7d8e9469
+Command: [63e4224dafec6b699f2eb9413687dcbc, findElement {using=xpath, value=//*[@id=&quot;UserListTable&quot;]/tbody/tr[1]/td[6]/span/a[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52837/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63e4224dafec6b699f2eb9413687dcbc
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -310,9 +310,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9afb46073701f10b91d5df3a7d8e9469, findElement {using=xpath, value=//div[@class=&apos;toast-title&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49296}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49296/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9afb46073701f10b91d5df3a7d8e9469
+Command: [63e4224dafec6b699f2eb9413687dcbc, findElement {using=xpath, value=//div[@class=&apos;toast-title&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52837/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63e4224dafec6b699f2eb9413687dcbc
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -443,52 +443,52 @@ data.addRows(11);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'profile')
 data.setCell(0, 2, 'corporate.InsideFeatures')
-data.setCell(0, 3, 84458);
+data.setCell(0, 3, 86019);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Signup')
+data.setCell(1, 1, 'Adduser')
 data.setCell(1, 2, 'corporate.InsideFeatures')
-data.setCell(1, 3, 46794);
+data.setCell(1, 3, 56319);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Adduser')
+data.setCell(2, 1, 'Signup')
 data.setCell(2, 2, 'corporate.InsideFeatures')
-data.setCell(2, 3, 45367);
+data.setCell(2, 3, 51710);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'withdraw')
+data.setCell(3, 1, 'login')
 data.setCell(3, 2, 'corporate.InsideFeatures')
-data.setCell(3, 3, 36978);
+data.setCell(3, 3, 45765);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'login')
+data.setCell(4, 1, 'mainpage')
 data.setCell(4, 2, 'corporate.InsideFeatures')
-data.setCell(4, 3, 36601);
+data.setCell(4, 3, 44840);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'mainpage')
+data.setCell(5, 1, 'withdraw')
 data.setCell(5, 2, 'corporate.InsideFeatures')
-data.setCell(5, 3, 30922);
+data.setCell(5, 3, 37680);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'loadmoney')
 data.setCell(6, 2, 'corporate.InsideFeatures')
-data.setCell(6, 3, 19410);
+data.setCell(6, 3, 25118);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'transaction')
 data.setCell(7, 2, 'corporate.InsideFeatures')
-data.setCell(7, 3, 15938);
+data.setCell(7, 3, 18023);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'requestMoneyBack')
 data.setCell(8, 2, 'corporate.InsideFeatures')
-data.setCell(8, 3, 15072);
+data.setCell(8, 3, 15037);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'allTransactions')
 data.setCell(9, 2, 'corporate.InsideFeatures')
-data.setCell(9, 3, 13390);
+data.setCell(9, 3, 13530);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'sendmoney')
 data.setCell(10, 2, 'corporate.InsideFeatures')
-data.setCell(10, 3, 9706);
+data.setCell(10, 3, 10199);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -521,57 +521,57 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">Signup</span>
-                <span class="method-start">9361 ms</span>
+                <span class="method-start">5349 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">56167 ms</span>
+                <span class="method-start">57077 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Adduser</span>
-                <span class="method-start">92771 ms</span>
+                <span class="method-start">102859 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loadmoney</span>
-                <span class="method-start">138379 ms</span>
+                <span class="method-start">159415 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">withdraw</span>
-                <span class="method-start">157791 ms</span>
+                <span class="method-start">184536 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sendmoney</span>
-                <span class="method-start">194941 ms</span>
+                <span class="method-start">222385 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">transaction</span>
-                <span class="method-start">204652 ms</span>
+                <span class="method-start">232588 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">allTransactions</span>
-                <span class="method-start">220777 ms</span>
+                <span class="method-start">250766 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">requestMoneyBack</span>
-                <span class="method-start">234336 ms</span>
+                <span class="method-start">264444 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">profile</span>
-                <span class="method-start">249571 ms</span>
+                <span class="method-start">279626 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">mainpage</span>
-                <span class="method-start">334034 ms</span>
+                <span class="method-start">365655 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
