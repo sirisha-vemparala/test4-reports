@@ -14,10 +14,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.qa.utils.EmailUtils;
 import com.qa.utils.ExtentReporter;
-import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -113,27 +111,32 @@ public class MyListeners extends BaseTest implements ITestListener {
     }
 
     private void uploadReportToGitHub(String filePath, String fileName) {
-        String url = "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contents/reports/" + fileName;
-
-        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+        try {
             File file = new File(filePath);
             byte[] fileContent = Files.readAllBytes(file.toPath());
-            String base64Content = Base64.getEncoder().encodeToString(fileContent);
+            String encodedContent = Base64.getEncoder().encodeToString(fileContent);
 
-            String json = String.format("{\"message\": \"Upload report %s\",\"content\": \"%s\"}", fileName, base64Content);
+            String url = "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contents/" + fileName;
+            String jsonBody = String.format("{\"message\": \"Add report file %s\", \"content\": \"%s\"}", fileName, encodedContent);
 
+            CloseableHttpClient httpClient = HttpClients.createDefault();
             HttpPost uploadFile = new HttpPost(url);
+
             uploadFile.setHeader("Authorization", "token " + githubToken);
-            uploadFile.setHeader("Accept", "application/vnd.github.v3+json");
-            uploadFile.setEntity(new StringEntity(json, ContentType.APPLICATION_JSON));
+            uploadFile.setHeader("Content-Type", "application/json");
+            uploadFile.setEntity(new StringEntity(jsonBody));
 
             try (CloseableHttpResponse response = httpClient.execute(uploadFile)) {
-                HttpEntity entity = response.getEntity();
-                if (entity != null) {
-                    String result = EntityUtils.toString(entity);
-                    System.out.println("GitHub upload response: " + result);
+                String responseString = EntityUtils.toString(response.getEntity());
+
+                if (response.getStatusLine().getStatusCode() == 201) {
+                    System.out.println("Report uploaded successfully: " + responseString);
+                } else {
+                    System.err.println("Failed to upload report: " + responseString);
                 }
             }
+
+            httpClient.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
