@@ -8,10 +8,8 @@
     <classes>
       <class name="corporate.InsideFeatures">
         <methods>
-          <include name="profile"/>
           <include name="requestMoneyBack"/>
           <include name="withdraw"/>
-          <include name="Adduser"/>
           <include name="allTransactions"/>
           <include name="setup"/>
           <include name="transaction"/>

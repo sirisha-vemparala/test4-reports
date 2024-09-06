@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods, 6 failed,   5 passed</span>
+                    <span class="method-stats">11 methods, 4 failed,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,17 +104,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="corporate.InsideFeatures" class="method navigator-link" hash-for-method="Adduser">Adduser</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="corporate.InsideFeatures" class="method navigator-link" hash-for-method="allTransactions">allTransactions</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="corporate.InsideFeatures" class="method navigator-link" hash-for-method="profile">profile</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -143,6 +133,11 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="corporate.InsideFeatures" class="method navigator-link" hash-for-method="Adduser">Adduser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="corporate.InsideFeatures" class="method navigator-link" hash-for-method="Signup">Signup</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -159,6 +154,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="corporate.InsideFeatures" class="method navigator-link" hash-for-method="mainpage">mainpage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="corporate.InsideFeatures" class="method navigator-link" hash-for-method="profile">profile</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -186,49 +186,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Adduser">
-                  </a> <!-- Adduser -->
-                  <span class="method-name">Adduser</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[@align=&apos;left&apos;]//p[4]&quot;}
-  (Session info: chrome=128.0.6613.114)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [03a8ce19810488b4885dfafb2e73e467, findElement {using=xpath, value=//td[@align=&apos;left&apos;]//p[4]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50876}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50876/devtoo..., se:cdpVersion: 128.0.6613.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 03a8ce19810488b4885dfafb2e73e467
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at corporate.InsideFeatures.Adduser(InsideFeatures.java:176)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="allTransactions">
                   </a> <!-- allTransactions -->
                   <span class="method-name">allTransactions</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;All&apos;)]&quot;}
-  (Session info: chrome=128.0.6613.114)
+  (Session info: chrome=128.0.6613.120)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [06343a0f08875dfced45e6e999345646, findElement {using=xpath, value=//a[contains(text(),&apos;All&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50311}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50311/devtoo..., se:cdpVersion: 128.0.6613.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 06343a0f08875dfced45e6e999345646
+Command: [6ae7a63e766a50ef76973d357eb0e44c, findElement {using=xpath, value=//a[contains(text(),&apos;All&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.120, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62149}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62149/devtoo..., se:cdpVersion: 128.0.6613.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ae7a63e766a50ef76973d357eb0e44c
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -248,30 +217,18 @@ Session ID: 06343a0f08875dfced45e6e999345646
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="profile">
-                  </a> <!-- profile -->
-                  <span class="method-name">profile</span>
-                  <div class="stack-trace">java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
-	at corporate.InsideFeatures.profile(InsideFeatures.java:346)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="requestMoneyBack">
                   </a> <!-- requestMoneyBack -->
                   <span class="method-name">requestMoneyBack</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;UserListTable&quot;]/tbody/tr[1]/td[6]/span/a[3]&quot;}
-  (Session info: chrome=128.0.6613.114)
+  (Session info: chrome=128.0.6613.120)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [06343a0f08875dfced45e6e999345646, findElement {using=xpath, value=//*[@id=&quot;UserListTable&quot;]/tbody/tr[1]/td[6]/span/a[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50311}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50311/devtoo..., se:cdpVersion: 128.0.6613.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 06343a0f08875dfced45e6e999345646
+Command: [6ae7a63e766a50ef76973d357eb0e44c, findElement {using=xpath, value=//*[@id=&quot;UserListTable&quot;]/tbody/tr[1]/td[6]/span/a[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.120, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\Users\Hello\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62149}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62149/devtoo..., se:cdpVersion: 128.0.6613.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ae7a63e766a50ef76973d357eb0e44c
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -328,6 +285,13 @@ Driver info: driver.version: unknown
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="Adduser">
+                  </a> <!-- Adduser -->
+                  <span class="method-name">Adduser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="Signup">
                   </a> <!-- Signup -->
                   <span class="method-name">Signup</span>
@@ -352,6 +316,13 @@ Driver info: driver.version: unknown
                   <a name="mainpage">
                   </a> <!-- mainpage -->
                   <span class="method-name">mainpage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="profile">
+                  </a> <!-- profile -->
+                  <span class="method-name">profile</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -420,54 +391,54 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'mainpage')
+data.setCell(0, 1, 'profile')
 data.setCell(0, 2, 'corporate.InsideFeatures')
-data.setCell(0, 3, 49426);
+data.setCell(0, 3, 92906);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Signup')
 data.setCell(1, 2, 'corporate.InsideFeatures')
-data.setCell(1, 3, 44656);
+data.setCell(1, 3, 40747);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'login')
+data.setCell(2, 1, 'Adduser')
 data.setCell(2, 2, 'corporate.InsideFeatures')
-data.setCell(2, 3, 39206);
+data.setCell(2, 3, 35565);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Adduser')
+data.setCell(3, 1, 'mainpage')
 data.setCell(3, 2, 'corporate.InsideFeatures')
-data.setCell(3, 3, 33565);
+data.setCell(3, 3, 35423);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'profile')
+data.setCell(4, 1, 'login')
 data.setCell(4, 2, 'corporate.InsideFeatures')
-data.setCell(4, 3, 33439);
+data.setCell(4, 3, 34583);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'loadmoney')
 data.setCell(5, 2, 'corporate.InsideFeatures')
-data.setCell(5, 3, 20943);
+data.setCell(5, 3, 22634);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'transaction')
 data.setCell(6, 2, 'corporate.InsideFeatures')
-data.setCell(6, 3, 17467);
+data.setCell(6, 3, 16245);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'allTransactions')
+data.setCell(7, 1, 'requestMoneyBack')
 data.setCell(7, 2, 'corporate.InsideFeatures')
-data.setCell(7, 3, 16628);
+data.setCell(7, 3, 15087);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'requestMoneyBack')
+data.setCell(8, 1, 'allTransactions')
 data.setCell(8, 2, 'corporate.InsideFeatures')
-data.setCell(8, 3, 15106);
+data.setCell(8, 3, 13378);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'sendmoney')
 data.setCell(9, 2, 'corporate.InsideFeatures')
-data.setCell(9, 3, 10584);
+data.setCell(9, 3, 9630);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'withdraw')
 data.setCell(10, 2, 'corporate.InsideFeatures')
-data.setCell(10, 3, 8366);
+data.setCell(10, 3, 6639);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -500,59 +471,55 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">Signup</span>
-                <span class="method-start">5765 ms</span>
+                <span class="method-start">5364 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">50433 ms</span>
+                <span class="method-start">46130 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Adduser</span>
-                <span class="method-start">89645 ms</span>
+                <span class="method-start">80719 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loadmoney</span>
-                <span class="method-start">124005 ms</span>
+                <span class="method-start">116288 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">withdraw</span>
-                <span class="method-start">144952 ms</span>
+                <span class="method-start">138926 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sendmoney</span>
-                <span class="method-start">153685 ms</span>
+                <span class="method-start">145816 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">transaction</span>
-                <span class="method-start">164278 ms</span>
+                <span class="method-start">155450 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">allTransactions</span>
-                <span class="method-start">182330 ms</span>
+                <span class="method-start">171859 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">requestMoneyBack</span>
-                <span class="method-start">199446 ms</span>
+                <span class="method-start">185486 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">profile</span>
-                <span class="method-start">214822 ms</span>
+                <span class="method-start">200795 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">mainpage</span>
-                <span class="method-start">248612 ms</span>
+                <span class="method-start">293706 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
