@@ -93,7 +93,7 @@ public class MyListeners extends BaseTest implements ITestListener {
 
         if (smtpUsername != null && smtpPassword != null) {
             try {
-                EmailUtils.sendEmailWithReportURL(subject, body, smtpUsername, smtpPassword, recipients);
+            	EmailUtils.sendEmailWithReportURL(subject, body, smtpUsername, smtpPassword, recipients);
                 System.out.println("Email sent successfully to " + String.join(", ", recipients));
             } catch (Exception e) {
                 System.err.println("Failed to send email: " + e.getMessage());
@@ -105,6 +105,7 @@ public class MyListeners extends BaseTest implements ITestListener {
 
     private void uploadReportToGitHub(String reportFilePath, String reportFileName) {
         // GitUtils to commit and push the report to GitHub
-        GitUtils.commitAndPush("Automated report upload: " + reportFileName);
+    	GitUtils.commitAndPush("committed and pushed the changes");
+
     }
 }

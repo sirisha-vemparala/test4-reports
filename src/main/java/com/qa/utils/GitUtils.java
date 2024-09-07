@@ -5,34 +5,27 @@ import java.io.InputStreamReader;
 
 public class GitUtils {
 
-    public static void commitAndPush(String commitMessage, String workingDir) {
+    public static void commitAndPush(String commitMessage) {
         try {
             // Add changes to staging
-            String addResult = executeCommand("git add reports/", workingDir);
-            System.out.println("Git add result: " + addResult);
+            executeCommand("git add reports/");
             
             // Commit changes
-            String commitResult = executeCommand("git commit -m \"" + commitMessage + "\"", workingDir);
+            String commitResult = executeCommand("git commit -m \"" + commitMessage + "\"");
             if (commitResult.contains("nothing to commit")) {
                 System.out.println("No changes to commit");
                 return;
             }
-            System.out.println("Git commit result: " + commitResult);
             
             // Push changes to the remote repository
-            String pushResult = executeCommand("git push origin master", workingDir);
-            System.out.println("Git push result: " + pushResult);
+            executeCommand("git push origin master");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private static String executeCommand(String command, String workingDir) throws Exception {
-        ProcessBuilder processBuilder = new ProcessBuilder();
-        processBuilder.command("bash", "-c", command);
-        processBuilder.directory(new java.io.File(workingDir));
-        
-        Process process = processBuilder.start();
+    private static String executeCommand(String command) throws Exception {
+        Process process = Runtime.getRuntime().exec(command);
         
         // Capture output
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -50,12 +43,11 @@ public class GitUtils {
             errorOutput.append(line).append("\n");
         }
         
-        int exitCode = process.waitFor();
+        process.waitFor();
         
         // Log output and error
-        if (exitCode != 0) {
+        if (errorOutput.length() > 0) {
             System.err.println("Error executing command: " + command);
-            System.err.println("Exit code: " + exitCode);
             System.err.println(errorOutput.toString());
         }
         
